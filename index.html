@@ -24,31 +24,31 @@
     :focus-visible{outline:3px solid var(--focus-ring);outline-offset:3px;}
 
     /* Nav */
-    nav{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:3px solid var(--red);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:56px;}
-    .nav-brand{font-family:var(--font-display);color:var(--cream);font-size:1rem;letter-spacing:.04em;text-decoration:none;opacity:.9;}
-    .nav-links{display:flex;gap:.25rem;list-style:none;}
-    .nav-links a{font-family:var(--font-mono);font-size:.82rem;color:var(--cream-dark);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;padding:.35rem .75rem;border-radius:2px;transition:background .2s,color .2s;}
-    .nav-links a:hover,.nav-links a:focus-visible{background:rgba(255,255,255,.1);color:#fff;outline-color:#fff;}
+    nav{position:sticky;top:0;z-index:100;background:var(--navy);border-bottom:5px solid var(--red);display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:68px;}
+    .nav-brand{font-family:var(--font-display);color:var(--cream);font-size:1.15rem;letter-spacing:.04em;text-decoration:none;opacity:1;}
+    .nav-links{display:flex;gap:.35rem;list-style:none;}
+    .nav-links a{font-family:var(--font-mono);font-size:.88rem;color:var(--cream-dark);text-decoration:none;letter-spacing:.09em;text-transform:uppercase;padding:.45rem .9rem;border-radius:2px;transition:background .2s,color .2s;font-weight:700;}
+    .nav-links a:hover,.nav-links a:focus-visible{background:rgba(255,255,255,.12);color:#fff;outline-color:#fff;}
     .nav-links .active{background:var(--red);color:#fff;}
 
     /* Header */
-    .site-header{background:var(--navy);color:var(--cream);padding:4rem 2.5rem 3.5rem;position:relative;overflow:hidden;}
+    .site-header{background:var(--navy);color:var(--cream);padding:4rem 2.5rem 3.5rem;position:relative;overflow:hidden;text-align:center;}
     .site-header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(255,255,255,.025) 28px,rgba(255,255,255,.025) 29px);pointer-events:none;}
     .site-header::after{content:'DECLASSIFIED';position:absolute;top:2rem;right:3rem;font-family:var(--font-mono);font-size:.72rem;letter-spacing:.3em;color:var(--red-light);border:1.5px solid var(--red);padding:.2rem .6rem;opacity:.6;transform:rotate(2deg);}
     .header-eyebrow{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.25em;text-transform:uppercase;color:var(--red-light);margin-bottom:1rem;}
-    .site-header h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;max-width:700px;margin-bottom:1.25rem;}
-    .site-header > p{font-size:1.05rem;max-width:620px;color:rgba(244,237,224,.85);line-height:1.7;}
+    .site-header h1{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;max-width:700px;margin:0 auto 1.25rem;}
+    .site-header > p{font-size:1.05rem;max-width:620px;color:rgba(244,237,224,.85);line-height:1.7;margin:0 auto;}
     .toolkit-badge{display:inline-block;margin-top:1.75rem;font-family:var(--font-mono);font-size:.82rem;letter-spacing:.15em;text-transform:uppercase;background:var(--red);color:var(--cream);padding:.3rem .85rem;}
 
     /* Layout */
     .section-wrap{max-width:860px;margin:0 auto;padding:4rem 2rem;}
-    .section-divider{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem;}
+    .section-divider{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem;justify-content:center;}
     .section-number{font-family:var(--font-mono);font-size:.82rem;letter-spacing:.2em;color:var(--red);text-transform:uppercase;white-space:nowrap;font-weight:700;}
-    .section-rule{flex:1;height:1px;background:var(--rule);}
-    section h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);margin-bottom:.5rem;line-height:1.2;}
+    .section-rule{flex:0 0 60px;height:1px;background:var(--rule);}
+    section h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.2rem);color:var(--navy);margin-bottom:.5rem;line-height:1.2;text-align:center;}
     .section-intro{font-size:1.05rem;color:var(--ink-light);max-width:680px;margin-bottom:2.5rem;font-style:italic;}
     .subsection{margin-bottom:2.75rem;}
-    .subsection h3{font-family:var(--font-body);font-size:1.1rem;font-weight:700;color:var(--navy-mid);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1.5px solid var(--cream-dark);}
+    .subsection h3{font-family:var(--font-body);font-size:1.1rem;font-weight:700;color:var(--navy-mid);margin-bottom:.75rem;padding-bottom:.4rem;border-bottom:1.5px solid var(--cream-dark);text-align:center;}
     .subsection p{margin-bottom:.85rem;color:var(--ink);}
     .subsection p:last-child{margin-bottom:0;}
     .section-sep{border:none;height:1px;background:linear-gradient(to right,transparent,var(--rule),transparent);margin:0;}
@@ -106,65 +106,8 @@
     .step-body h4{font-family:var(--font-body);font-size:1rem;font-weight:700;color:var(--navy-mid);margin-bottom:.35rem;}
     .step-body p{font-size:1rem;color:var(--ink);line-height:1.65;}
 
-    /* Interactive blocks */
-    .interactive-block{border:1.5px solid var(--rule);background:#fff;margin:2rem 0;}
-    .interactive-header{background:var(--navy-mid);padding:.85rem 1.25rem;display:flex;align-items:center;gap:.75rem;}
-    .interactive-header .ih-icon{color:var(--cream);opacity:.8;flex-shrink:0;}
-    .interactive-header h4{font-family:var(--font-display);font-size:1rem;color:var(--cream);line-height:1.2;}
-    .interactive-header p{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.08em;color:rgba(244,237,224,.75);margin-top:.15rem;}
-    .interactive-body{padding:1.5rem;}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;}
-    .form-row.single{grid-template-columns:1fr;}
-    .form-row.triple{grid-template-columns:1fr 1fr 1fr;}
-    .form-group{display:flex;flex-direction:column;gap:.35rem;}
-    .form-group label{font-family:var(--font-mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--navy-mid);font-weight:700;}
-    .form-group input,.form-group select,.form-group textarea{font-family:var(--font-mono);font-size:.88rem;color:var(--ink);background:var(--cream);border:1.5px solid var(--rule-dark);padding:.55rem .75rem;outline:none;transition:border-color .15s;width:100%;appearance:none;-webkit-appearance:none;}
-    .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--navy-mid);background:#fff;box-shadow:0 0 0 2px rgba(44,63,96,.2);}
-    .form-group textarea{resize:vertical;min-height:80px;line-height:1.5;}
-    .form-check-group{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.25rem;}
-    .form-check-group label{display:flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.04em;text-transform:none;color:var(--ink);cursor:pointer;padding:.3rem .65rem;border:1.5px solid var(--rule-dark);transition:background .15s,border-color .15s;}
-    .form-check-group input[type=checkbox]{accent-color:var(--navy-mid);width:14px;height:14px;flex-shrink:0;}
-    .form-check-group label:has(input:checked){background:var(--navy-mid);color:var(--cream);border-color:var(--navy-mid);}
-    .btn-primary{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;background:var(--navy);color:var(--cream);border:none;padding:.7rem 1.5rem;cursor:pointer;transition:background .2s;margin-top:.5rem;}
-    .btn-primary:hover,.btn-primary:focus-visible{background:var(--red);}
-    .btn-copy{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--navy-mid);border:1.5px solid var(--rule-dark);padding:.3rem .75rem;cursor:pointer;transition:background .15s;margin-left:.5rem;}
-    .btn-copy:hover,.btn-copy:focus-visible{background:var(--cream-dark);}
-    .btn-copy.copied{color:var(--math);border-color:var(--math);}
-    .output-block{display:none;margin-top:1.5rem;border-top:1px solid var(--cream-dark);padding-top:1.5rem;}
-    .output-block.visible{display:block;}
-    .output-label{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.4rem;display:flex;align-items:center;justify-content:space-between;font-weight:700;}
-    .output-text{background:var(--cream-dark);border-left:3px solid var(--rule-dark);padding:.85rem 1.1rem;font-family:var(--font-mono);font-size:.9rem;line-height:1.7;color:var(--ink);margin-bottom:1rem;white-space:pre-wrap;word-break:break-word;}
 
-    /* Fair Use evaluator */
-    .fu-factor{border:1px solid var(--cream-dark);margin-bottom:.75rem;overflow:hidden;}
-    .fu-factor-header{display:flex;align-items:center;justify-content:space-between;padding:.85rem 1.1rem;cursor:pointer;background:var(--cream);user-select:none;gap:1rem;}
-    .fu-factor-header:hover,.fu-factor-header:focus-visible{background:var(--cream-dark);}
-    .fu-factor-title{font-family:var(--font-mono);font-size:.82rem;font-weight:700;color:var(--navy);letter-spacing:.04em;}
-    .fu-factor-status{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;padding:.25rem .6rem;border:1.5px solid currentColor;white-space:nowrap;font-weight:700;}
-    .fu-factor-status.unanswered{color:var(--muted);}
-    .fu-factor-status.favors{color:var(--math);}
-    .fu-factor-status.neutral{color:#5e4510;}
-    .fu-factor-status.against{color:var(--red);}
-    .fu-chevron{color:var(--ink-light);transition:transform .2s;flex-shrink:0;}
-    .fu-factor.open .fu-chevron{transform:rotate(180deg);}
-    .fu-factor-body{display:none;padding:1rem 1.1rem 1.1rem;border-top:1px solid var(--cream-dark);background:#fff;}
-    .fu-factor.open .fu-factor-body{display:block;}
-    .fu-factor-desc{font-size:.9rem;color:var(--ink-light);font-style:italic;margin-bottom:.85rem;line-height:1.6;}
-    .fu-radio-group{display:flex;flex-direction:column;gap:.5rem;}
-    .fu-radio-group label{display:flex;align-items:flex-start;gap:.6rem;font-size:.9rem;color:var(--ink);cursor:pointer;line-height:1.55;}
-    .fu-radio-group input[type=radio]{accent-color:var(--navy-mid);margin-top:.2rem;flex-shrink:0;}
-    .fu-result{display:none;margin-top:1.5rem;border-top:1px solid var(--cream-dark);padding-top:1.5rem;}
-    .fu-result.visible{display:block;}
-    .fu-result-bar{height:8px;margin-bottom:1rem;background:var(--cream-dark);position:relative;overflow:hidden;border-radius:2px;}
-    .fu-result-fill{position:absolute;left:0;top:0;height:100%;transition:width .6s ease,background .6s ease;}
-    .fu-result-verdict{font-family:var(--font-display);font-size:1.2rem;margin-bottom:.5rem;}
-    .fu-result-verdict.strong{color:var(--math);}
-    .fu-result-verdict.caution{color:#5e4510;}
-    .fu-result-verdict.risk{color:var(--red);}
-    .fu-result-note{font-size:.9rem;color:var(--ink);line-height:1.65;margin-bottom:.75rem;}
-    .fu-disclaimer{font-family:var(--font-mono);font-size:.82rem;color:var(--ink-light);border-top:1px solid var(--cream-dark);padding-top:.75rem;line-height:1.6;}
-
-    /* Topic index */
+        /* Topic index */
     .topic-category{margin-bottom:3rem;}
     .category-label{font-family:var(--font-display);font-size:1rem;color:var(--cream);background:var(--navy-mid);display:inline-block;padding:.3rem 1rem;margin-bottom:1.25rem;letter-spacing:.04em;}
     .topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;}
@@ -199,7 +142,7 @@
     .thread-block.art{border-top:4px solid var(--art);}
     .thread-block.narrative{border-top:4px solid var(--lit);}
     .thread-header{display:flex;align-items:center;gap:.65rem;margin-bottom:.65rem;}
-    .thread-block h3{font-family:var(--font-body);font-size:1.05rem;font-weight:700;color:var(--navy);}
+    .thread-block h3{font-family:var(--font-body);font-size:1.05rem;font-weight:700;color:var(--navy);text-align:center;}
     .thread-desc{font-size:.97rem;color:var(--ink-light);font-style:italic;line-height:1.6;margin-bottom:1rem;padding-bottom:.85rem;border-bottom:1px dashed var(--rule);}
     .thread-sources{display:flex;flex-direction:column;gap:.75rem;}
     .ts-name{font-size:.97rem;font-weight:600;margin-bottom:.2rem;}
@@ -239,115 +182,75 @@
 <header class="site-header" id="top">
   <p class="header-eyebrow">Research Toolkit</p>
   <h1>Cold War Innovations<br>Documentary Archive</h1>
-  <p>A research companion for student documentary filmmakers exploring the science, culture, and ideas that defined the postwar era, from 1945 through the late 1960s. This is a starting point &#8212; not a shortcut. Good documentary research means sitting with primary sources, asking harder questions, and letting the evidence shape your argument.</p>
+  <p>You have been assigned a documentary about the most anxious quarter-century in American history. Consider this your mission briefing. Your assets are in the archive. Your cover story is your argument. Begin with primary sources, follow what you actually find, and resist the temptation to write your conclusion before you have read the evidence.</p>
   <span class="toolkit-badge">Researcher&#8217;s Toolkit</span>
 </header>
 
 <!-- SECTION 1: ARCHIVES -->
 <section id="archives">
   <div class="section-wrap">
-    <div class="section-divider"><span class="section-number">Toolkit &#xB7; 01</span><div class="section-rule"></div></div>
+    <div class="section-divider"><div class="section-rule"></div><span class="section-number">Toolkit &#xB7; 01</span><div class="section-rule"></div></div>
     <h2>Finding the Archive</h2>
-    <p class="section-intro">Documentary filmmaking runs on primary sources: original photographs, newsreel footage, government documents, and firsthand accounts. Before you visit any of these collections, know what you&#8217;re looking for: a date range (1945&#8211;1965), a topic, and a media type (photograph, film, audio, text). The more specific your search, the better your results.</p>
+    <p class="section-intro">Every documentary runs on primary sources: original photographs, declassified documents, government films, firsthand accounts. Before you open any of these collections, know your target. A date range (1945 through the late 1960s), a subject, a media type. Vague operatives get lost in the archive. Focused ones come home with evidence.</p>
 
     <div class="subsection">
       <h3>Major Open-Access Collections</h3>
-      <p>These are free, legal, and built for public use. Most require no login and allow downloads of high-resolution files. Always verify the individual item&#8217;s license before using it in your film.</p>
+      <p>These collections are free, legal, and built for public use. No login required for most; high-resolution downloads available. Verify each item&#8217;s license before incorporating it into your film. Some assets are cleared for any use. Others have conditions. Read the fine print.</p>
       <div class="resource-grid">
-        <a class="resource-card" href="https://www.loc.gov/collections/" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Photos &amp; Film</div><div class="rc-title">Library of Congress &#8212; Digital Collections</div><div class="rc-desc">Over 20 million items online. The Prints &amp; Photographs division and the Motion Picture collection are essential for Cold War imagery. Search by subject heading, date, or format.</div><span class="rc-url">loc.gov/collections</span></a>
-        <a class="resource-card" href="https://www.archives.gov/research/search" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Government Records</div><div class="rc-title">National Archives (NARA)</div><div class="rc-desc">The definitive source for U.S. government documents, declassified records, and official photographs. The Access to Archival Databases (AAD) tool searches across millions of records.</div><span class="rc-url">archives.gov/research/search</span></a>
-        <a class="resource-card" href="https://archive.org/details/prelinger" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Film &amp; Audio</div><div class="rc-title">Prelinger Archives (Internet Archive)</div><div class="rc-desc">A goldmine for Cold War documentaries: educational films, industrial films, civil defense films, and newsreels from the 1940s&#8211;60s. Most items are in the public domain and downloadable.</div><span class="rc-url">archive.org/details/prelinger</span></a>
-        <a class="resource-card" href="https://www.si.edu/openaccess" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Art &amp; Objects</div><div class="rc-title">Smithsonian Open Access</div><div class="rc-desc">4.5 million+ images from across all Smithsonian museums, free for any use. Especially rich for science, technology, and American art history.</div><span class="rc-url">si.edu/openaccess</span></a>
-        <a class="resource-card" href="https://commons.wikimedia.org/" target="_blank" rel="noopener"><div class="rc-label">Mixed &middot; All Media Types</div><div class="rc-title">Wikimedia Commons</div><div class="rc-desc">Massive, well-organized collection of public domain and openly licensed media. Always read the license on each file. Excellent for finding images already identified and attributed.</div><span class="rc-url">commons.wikimedia.org</span></a>
-        <a class="resource-card" href="https://digitalcollections.nypl.org/" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Photos &amp; Documents</div><div class="rc-title">NYPL Digital Collections</div><div class="rc-desc">New York Public Library&#8217;s free digital collections include exceptional holdings in American social history, photography, and print culture covering the postwar period.</div><span class="rc-url">digitalcollections.nypl.org</span></a>
-        <a class="resource-card" href="https://www.wilsoncenter.org/program/cold-war-international-history-project" target="_blank" rel="noopener"><div class="rc-label">Secondary/Primary &middot; Documents</div><div class="rc-title">Cold War Int&#8217;l History Project (Wilson Center)</div><div class="rc-desc">Declassified documents from U.S. and former Soviet archives, plus expert essays. Essential for understanding the political and diplomatic context of any Cold War topic.</div><span class="rc-url">wilsoncenter.org</span></a>
-        <a class="resource-card" href="https://www.gettyimages.com/editorial-images" target="_blank" rel="noopener"><div class="rc-label">Access-Limited &middot; Photos</div><div class="rc-title">AP / Getty Images (Editorial)</div><div class="rc-desc">The largest collections of press photography: historically invaluable, but not free. You can embed low-res images for educational use via Getty&#8217;s embed tool. Do not download and re-upload.</div><span class="rc-url">gettyimages.com/editorial-images</span></a>
+        <a class="resource-card" href="https://www.loc.gov/collections/" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Photos &amp; Film</div><div class="rc-title">Library of Congress &#8212; Digital Collections</div><div class="rc-desc">Your largest domestic intelligence asset: a catalog of over 20 million records, with millions of items digitized and freely accessible online. The Prints &amp; Photographs division and the Motion Picture collection are essential. Search by subject heading, not just keyword. The archive rewards precision.</div><span class="rc-url">loc.gov/collections</span></a>
+        <a class="resource-card" href="https://www.archives.gov/research/search" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Government Records</div><div class="rc-title">National Archives (NARA)</div><div class="rc-desc">The official record of U.S. government activity. Declassified documents, agency memoranda, official photographs. If the federal government created it and it can now be seen, this is where to look. Search the Access to Archival Databases (AAD) tool for cross-agency records.</div><span class="rc-url">archives.gov/research/search</span></a>
+        <a class="resource-card" href="https://archive.org/details/prelinger" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Film &amp; Audio</div><div class="rc-title">Prelinger Archives (Internet Archive)</div><div class="rc-desc">Surveillance footage from inside the culture itself: educational films, civil defense films, industrial newsreels from the 1940s&#8211;60s. Most items are public domain and downloadable. Highly watchable. Highly usable.</div><span class="rc-url">archive.org/details/prelinger</span></a>
+        <a class="resource-card" href="https://www.si.edu/openaccess" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Art &amp; Objects</div><div class="rc-title">Smithsonian Open Access</div><div class="rc-desc">5.1 million+ digital items from across all Smithsonian museums, free for any use. Especially rich for science, technology, and American art history. No clearance required. Download, attribute, and proceed.</div><span class="rc-url">si.edu/openaccess</span></a>
+        <a class="resource-card" href="https://commons.wikimedia.org/" target="_blank" rel="noopener"><div class="rc-label">Mixed &middot; All Media Types</div><div class="rc-title">Wikimedia Commons</div><div class="rc-desc">A massive, reasonably well-organized collection of public domain and openly licensed media. Read the license on each file: not all assets are cleared for the same operations. Excellent for finding images that are already identified, attributed, and ready to use.</div><span class="rc-url">commons.wikimedia.org</span></a>
+        <a class="resource-card" href="https://digitalcollections.nypl.org/" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Photos &amp; Documents</div><div class="rc-title">NYPL Digital Collections</div><div class="rc-desc">The New York Public Library&#8217;s free digital collections. Exceptional holdings in American social history, photography, and print culture. A reliable field asset for the postwar period.</div><span class="rc-url">digitalcollections.nypl.org</span></a>
+        <a class="resource-card" href="https://www.wilsoncenter.org/program/cold-war-international-history-project" target="_blank" rel="noopener"><div class="rc-label">Secondary/Primary &middot; Documents</div><div class="rc-title">Cold War Int&#8217;l History Project (Wilson Center)</div><div class="rc-desc">Declassified documents from U.S. and Soviet archives, plus expert analysis. The other side&#8217;s files, now accessible. Essential for any topic where understanding both sides of the standoff is the whole point.</div><span class="rc-url">wilsoncenter.org</span></a>
+        <a class="resource-card" href="https://avalon.law.yale.edu/subject_menus/coldwar.asp" target="_blank" rel="noopener"><div class="rc-label">Primary &middot; Documents &amp; Treaties</div><div class="rc-title">Avalon Project (Yale Law School)</div><div class="rc-desc">The canonical open-access collection of diplomatic and legal primary documents, maintained by Yale&#8217;s Lillian Goldman Law Library. Truman Doctrine, Marshall Plan text, NATO treaty, Cuban Missile Crisis documents, Geneva Accords, and the Oppenheimer AEC hearing: the founding texts of the Cold War&#8217;s formal structure. No login required.</div><span class="rc-url">avalon.law.yale.edu/subject_menus/coldwar.asp</span></a>
+        <a class="resource-card" href="https://www.gettyimages.com/editorial-images" target="_blank" rel="noopener"><div class="rc-label">Access-Limited &middot; Photos</div><div class="rc-title">AP / Getty Images (Editorial)</div><div class="rc-desc">The largest commercial press photography archive in the world: invaluable, but not free. Getty&#8217;s embed tool allows certain images to appear on non-commercial websites and blogs without a license &#8212; but embedding into a documentary film requires a license. For film use, identify the image and pursue licensing, or find a public domain equivalent. Do not download and re-upload.</div><span class="rc-url">gettyimages.com/editorial-images</span></a>
+
+    </div>
+
+    <div class="subsection">
+      <h3>Your Library&#8217;s Intelligence Network</h3>
+      <p>These licensed databases are available through your school library. No special clearance, but you will need to access them from school or via your library login. They carry peer-reviewed scholarship and reference content you will not encounter in a general web search. Deploy them alongside the open-access archives.</p>
+      <div class="resource-grid">
+        <a class="resource-card" href="https://link.gale.com/apps/BIC?u=nort87507" target="_blank" rel="noopener"><div class="rc-label">Database &middot; Library Access</div><div class="rc-title">Gale in Context: Biography</div><div class="rc-desc">Reference profiles for major historical figures across every field: scientists, politicians, artists, writers. Essential for building context around interview subjects and for the mock interview format.</div><span class="rc-url">link.gale.com/apps/BIC</span></a>
+        <a class="resource-card" href="https://link.gale.com/apps/UHIC?u=nort87507" target="_blank" rel="noopener"><div class="rc-label">Database &middot; Library Access</div><div class="rc-title">Gale in Context: U.S. History</div><div class="rc-desc">Full-text articles, primary sources, and reference entries covering American history. Peer-reviewed content relevant to every topic on this list. Use it to build interpretive context around primary sources.</div><span class="rc-url">link.gale.com/apps/UHIC</span></a>
+        <a class="resource-card" href="https://wehs.westex.libguides.com/amhis" target="_blank" rel="noopener"><div class="rc-label">Database &middot; Library Access</div><div class="rc-title">Infobase: American History</div><div class="rc-desc">Reference database with biographies, chronologies, and historical context for American history topics. Useful for building background knowledge before you go deeper into primary sources.</div><span class="rc-url">wehs.westex.libguides.com/amhis</span></a>
+        <a class="resource-card" href="https://popculture.abc-clio.com/?setcustomercontext=16772" target="_blank" rel="noopener"><div class="rc-label">Database &middot; Library Access</div><div class="rc-title">Pop Culture Universe</div><div class="rc-desc">A database dedicated to American popular culture: music, film, television, fashion, consumer goods. Particularly strong for the Art &amp; Design, Narrative, and Business threads. Connects cultural products to their historical context.</div><span class="rc-url">popculture.abc-clio.com</span></a>
       </div>
     </div>
 
     <div class="subsection">
       <h3>How to Search Archival Collections</h3>
-      <p>A common student mistake is typing a broad keyword and giving up when results are overwhelming or irrelevant. Archivists organize collections using <em>controlled vocabulary</em> &#8212; specific subject headings that may not match everyday language. Learning to search the way archivists describe things will unlock far better results.</p>
+      <p>The most common mistake: typing one broad keyword, getting thousands of results, and giving up. Archivists organize collections using <em>controlled vocabulary</em> &#8212; specific subject headings that may not match everyday language. Learn to search the way the catalog was built. Your results will improve immediately.</p>
       <div class="tip-strip">
         <h4>Search Strategies That Actually Work</h4>
         <ul>
-          <li>Start with a <strong>date range</strong>. In the LOC and NARA, filter results to 1945&#8211;1965 immediately. Do this first to cut noise.</li>
-          <li>Use <strong>subject headings</strong>, not just keywords. &#8220;Cold War&#8221; as a subject heading returns differently organized results than as a keyword. Try both.</li>
-          <li>Search the <strong>format</strong> you need. In the LOC, filter by &#8220;photographs,&#8221; &#8220;motion pictures,&#8221; or &#8220;sound recordings&#8221; before browsing.</li>
-          <li>Try <strong>Boolean operators</strong>: <code>transistor AND Bell Labs</code> or <code>Levittown NOT New York</code> (to find the Pennsylvania community).</li>
-          <li>When you find a good record, look at its <strong>subject tags</strong> &#8212; click them to find related items the keyword search wouldn&#8217;t surface.</li>
-          <li>In the Prelinger Archives, search by <strong>decade</strong> and browse &#8220;industrial films&#8221; or &#8220;educational films&#8221; as genres.</li>
+          <li><strong>Set a date range immediately.</strong> Filter before you browse. Broad results are the enemy of good research.</li>
+          <li><strong>Use subject headings, not just keywords.</strong> Subject headings are the controlled vocabulary archivists use to describe things; they often differ from everyday language. When you find a useful record, click its subject tags to find related items the keyword search would never surface.</li>
+          <li><strong>Filter by format before browsing:</strong> photographs, motion pictures, sound recordings, government documents. Know what you need before you look.</li>
+          <li><strong>Try Boolean operators.</strong> AND narrows (topic AND related term). NOT excludes. OR widens. Combine them.</li>
+          <li><strong>When keywords fail, try synonyms.</strong> The catalog doesn&#8217;t know what you call things &#8212; only what the cataloger called them. Experiment.</li>
+          <li><strong>Research is iterative.</strong> Your first search is not your final search. Follow footnotes, subject tags, and related-records links. Let the evidence lead.</li>
         </ul>
       </div>
     </div>
 
     <div class="subsection">
-      <h3>Build Your Search String</h3>
-      <p>Use this tool to generate a starting search query for any major open-access archive. Fill in your topic, format, and date range &#8212; the builder will produce a Boolean string you can paste directly into the LOC, NARA, or Prelinger search boxes. Refine it as your research develops.</p>
-      <div class="interactive-block">
-        <div class="interactive-header">
-          <div class="ih-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="17" y1="17" x2="22" y2="22"/></svg></div>
-          <div><h4>Archival Search String Builder</h4><p>Generates Boolean queries for open-access archives</p></div>
-        </div>
-        <div class="interactive-body">
-          <div class="form-row">
-            <div class="form-group"><label for="sb-topic">Your topic or subject</label><input type="text" id="sb-topic" placeholder="e.g., Sputnik, Levittown, polio vaccine"></div>
-            <div class="form-group"><label for="sb-related">Related term / qualifier (optional)</label><input type="text" id="sb-related" placeholder="e.g., Soviet, suburban, Salk"></div>
-          </div>
-          <div class="form-row triple">
-            <div class="form-group"><label for="sb-exclude">Exclude this term (optional)</label><input type="text" id="sb-exclude" placeholder="e.g., New York"></div>
-            <div class="form-group"><label for="sb-date-start">Date range: start</label>
-              <select id="sb-date-start"><option value="1944">1944</option><option value="1945" selected>1945</option><option value="1947">1947</option><option value="1950">1950</option><option value="1952">1952</option><option value="1955">1955</option><option value="1957">1957</option><option value="1960">1960</option></select>
-            </div>
-            <div class="form-group"><label for="sb-date-end">Date range: end</label>
-              <select id="sb-date-end"><option value="1955">1955</option><option value="1958">1958</option><option value="1960">1960</option><option value="1962">1962</option><option value="1963">1963</option><option value="1965" selected>1965</option></select>
-            </div>
-          </div>
-          <div class="form-group" style="margin-bottom:1rem;">
-            <label>Format type (select all that apply)</label>
-            <div class="form-check-group">
-              <label><input type="checkbox" class="sb-format" value="photographs" checked> Photographs</label>
-              <label><input type="checkbox" class="sb-format" value="motion pictures"> Film / Newsreel</label>
-              <label><input type="checkbox" class="sb-format" value="sound recordings"> Audio / Radio</label>
-              <label><input type="checkbox" class="sb-format" value="newspapers"> Newspapers</label>
-              <label><input type="checkbox" class="sb-format" value="government documents"> Government Docs</label>
-            </div>
-          </div>
-          <div class="form-group" style="margin-bottom:1rem;"><label for="sb-archive">Target archive</label>
-            <select id="sb-archive">
-              <option value="loc">Library of Congress (loc.gov)</option>
-              <option value="nara">National Archives (NARA)</option>
-              <option value="prelinger">Prelinger Archives (Internet Archive)</option>
-              <option value="chronicling">Chronicling America (LOC newspapers)</option>
-            </select>
-          </div>
-          <button class="btn-primary" onclick="buildSearchString()">Generate Search String</button>
-          <div class="output-block" id="sb-output">
-            <div class="output-label"><span>Your search string</span><button class="btn-copy" onclick="copyOut('sb-result',this)">Copy</button></div>
-            <div class="output-text" id="sb-result"></div>
-            <div class="output-label"><span>How to use it in your target archive</span></div>
-            <div class="output-text" id="sb-instructions"></div>
-            <div class="callout tip" style="margin-top:0;"><div class="callout-label">Next step</div><p>This string is a starting point. When you find a good result, click its subject headings to discover items the keyword search won&#8217;t surface. Good research is iterative.</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="subsection">
       <h3>The 80/20 Rule: Building with B-Roll</h3>
-      <p>Your film has a production requirement: 80% of your footage should be historical material: archival photographs, government films, newsreels, and your expert interview. Only 20% should be student narrators on camera. This rule makes your film feel like a documentary rather than a recorded presentation, and it means that <em>finding strong visual primary sources is the central research task</em>, not an afterthought.</p>
+      <p>Your film has a production requirement: 80% historical material (archival photographs, government films, newsreels, your expert interview), 20% student narrators on camera. This is not a bureaucratic ratio. It is the difference between a documentary and a recorded presentation. Gathering strong visual primary sources is the central research task &#8212; not an afterthought, not something you do after you write the script.</p>
       <div class="callout warn">
         <div class="callout-label">Build Your B-Roll Inventory First</div>
-        <p>Before you write your script, find out what footage you actually have. Gather photographs, films, and images from the archives above &#8212; then write narration that can be supported by what you&#8217;ve found. A script written before the archive search leads to narration that floats over unrelated images.</p>
-        <p>Aim for at least 15&#8211;20 distinct visual assets before you start editing. Log each one: source, title, date, license type, and which section of your script it supports.</p>
+        <p>Search the archives before you write your script. Find out what footage actually exists for your topic. Then write narration the evidence can support. A script written before the archive search produces voiceover that floats above unrelated images &#8212; a signal to every viewer that the filmmaker did not do the work.</p>
+        <p>Aim for 15&#8211;20 distinct visual assets before you begin editing. Log each one: source, title, date, license type, and where in your script it belongs.</p>
       </div>
       <div class="tip-strip">
         <h4>B-Roll by Media Type: Where to Find It</h4>
         <ul>
           <li><strong>Historical photographs:</strong> LOC Prints &amp; Photographs, Smithsonian Open Access, NYPL Digital Collections, Wikimedia Commons</li>
-          <li><strong>Newsreel &amp; government film footage:</strong> Prelinger Archives (archive.org/details/prelinger) &#8212; your primary source for usable moving-image material</li>
-          <li><strong>Newspaper front pages &amp; headlines:</strong> Chronicling America (chroniclingamerica.loc.gov) covers through 1963 &#8212; a well-composed close-up of a headline is legitimate B-roll</li>
-          <li><strong>Government documents:</strong> NARA and LOC &#8212; a photograph of a primary document on screen communicates authenticity</li>
+          <li><strong>Newsreel &amp; government footage:</strong> Prelinger Archives &#8212; your primary source for usable moving-image material</li>
+          <li><strong>Newspaper front pages &amp; headlines:</strong> Chronicling America covers through 1963. A well-composed close-up of a headline is legitimate B-roll.</li>
+          <li><strong>Government documents:</strong> NARA and LOC. A document on screen communicates authenticity; declassified stamps communicate it even louder.</li>
           <li><strong>Artwork &amp; design objects:</strong> Smithsonian Open Access, MoMA collection, LOC Prints &amp; Photographs</li>
         </ul>
       </div>
@@ -355,30 +258,30 @@
 
     <div class="subsection">
       <h3>The Interview: Preparing Your Expert Source</h3>
-      <p>You must interview either a real expert (a subject-area teacher, scientist, or practitioner) or produce a well-researched mock interview with a historical figure. Both require serious preparation. A strong interview is not a Q&amp;A that repeats facts from your script. It provides a perspective, an interpretation, or a depth of detail the script alone cannot deliver.</p>
+      <p>You must interview either a real expert (a subject-area teacher, scientist, or practitioner) or produce a well-researched mock interview with a historical figure. Both require serious preparation. A strong interview delivers analysis, not summary. It provides a perspective your script alone cannot: a depth of detail, an interpretive angle, a voice that is not yours.</p>
       <div class="def-list">
         <div class="def-item">
           <div class="def-term">Real Expert Interview</div>
-          <div class="def-desc">Identify a teacher whose subject intersects your topic &#8212; Physics for the Space Race or Nuclear Age, Economics for franchising, English for <em>The Crucible</em>. Share your research questions (not just your script) so they can speak from their expertise. Prepare 5&#8211;8 questions in advance. The best interview questions are open-ended and discipline-specific: &#8220;What does orbital mechanics actually tell us about the engineering gap NASA had to close after Sputnik?&#8221; is more useful than &#8220;Why was Sputnik important?&#8221;</div>
+          <div class="def-desc">Identify a teacher whose discipline intersects your topic: Physics for the Space Race, Economics for franchising, English for <em>The Crucible</em>. Share your research questions, not just your topic &#8212; you want them to speak from expertise, not recite facts back at you. Prepare 5&#8211;8 questions in advance. The best questions are open-ended and discipline-specific. They cannot be answered with a yes or a no.</div>
         </div>
         <div class="def-item">
           <div class="def-term">Mock Historical Interview</div>
-          <div class="def-desc">A mock interview requires you to research your subject deeply enough to represent their documented views accurately. You are not inventing dialogue &#8212; you are dramatizing positions the figure actually held, in language consistent with primary sources. Cite your sources for every claim the &#8220;figure&#8221; makes. This format works best when the figure&#8217;s perspective is well-documented: Arthur Miller&#8217;s HUAC testimony, Salk&#8217;s press statements, Eisenhower&#8217;s farewell address, Chuck Berry&#8217;s published interviews.</div>
+          <div class="def-desc">A mock interview is not improvised dialogue. Research your subject deeply enough to represent their documented views accurately; then dramatize positions they actually held, in language consistent with primary sources. Cite your sources for every claim the &#8220;figure&#8221; makes. This format works best for figures with well-documented public records: Miller&#8217;s HUAC testimony, Salk&#8217;s press statements, Eisenhower&#8217;s farewell address.</div>
         </div>
         <div class="def-item">
           <div class="def-term">What Makes a Strong Question</div>
-          <div class="def-desc">Strong questions ask for analysis, not summary. They connect your topic to the interviewee&#8217;s specific expertise and cannot be answered with &#8220;yes&#8221; or &#8220;no.&#8221; Examples: &#8220;What does the fission-to-fusion transition reveal about the relationship between pure science and weapons development?&#8221; &#8220;How does Levittown&#8217;s construction logic compare to industrial assembly-line manufacturing?&#8221; &#8220;What mathematical concept best explains why MAD was considered a stable deterrent?&#8221;</div>
+          <div class="def-desc">Strong questions demand analysis, not summary. They connect to the interviewee&#8217;s specific expertise; they cannot be deflected with a yes or a no; they reveal something. Weak: &#8220;Why was Sputnik important?&#8221; Strong: &#8220;What does orbital mechanics tell us about the engineering gap NASA had to close after 1957?&#8221; The difference is preparation.</div>
         </div>
       </div>
       <div class="callout tip">
         <div class="callout-label">Production Note</div>
-        <p>Record a short pre-interview to check audio levels. The most usable answers often come in the middle of a longer response. Plan to edit selectively rather than use the interview uncut. A 45-second clip of precise, expert analysis is more effective than three minutes of general commentary.</p>
+        <p>Record a short pre-interview to check audio levels. The best material often arrives in the middle of a longer answer. Edit selectively; do not use the interview uncut. Forty-five seconds of precise expert analysis outperforms three minutes of general commentary every time.</p>
       </div>
     </div>
 
     <div class="subsection">
       <h3>Copyright-Safe Background Music</h3>
-      <p>Your film requires music, and using commercial recordings without a license is a real copyright problem &#8212; even for a school project uploaded to Drive. These sources offer genuinely free and legal options for student filmmakers.</p>
+      <p>Your film needs music. Using commercial recordings without a license is a real copyright exposure &#8212; even for a school project on a shared drive. These sources offer genuinely free and legal options. Check each track&#8217;s specific license; they vary.</p>
       <div class="resource-grid">
         <a class="resource-card" href="https://freemusicarchive.org/" target="_blank" rel="noopener"><div class="rc-label">Free &middot; Various Licenses</div><div class="rc-title">Free Music Archive</div><div class="rc-desc">Curated library of freely licensed music. Filter by genre (try &#8220;jazz,&#8221; &#8220;orchestral,&#8221; or &#8220;ambient&#8221;) and by license type. Check each track; licenses vary.</div><span class="rc-url">freemusicarchive.org</span></a>
         <a class="resource-card" href="https://musopen.org/" target="_blank" rel="noopener"><div class="rc-label">Free &middot; Classical Recordings</div><div class="rc-title">Musopen</div><div class="rc-desc">Public domain classical music recordings and scores. The orchestral recordings are particularly good for documentary atmospherics &#8212; download MP3s for free.</div><span class="rc-url">musopen.org</span></a>
@@ -392,108 +295,32 @@
 <!-- SECTION 2: COPYRIGHT -->
 <section id="copyright">
   <div class="section-wrap">
-    <div class="section-divider"><span class="section-number">Toolkit &#xB7; 02</span><div class="section-rule"></div></div>
+    <div class="section-divider"><div class="section-rule"></div><span class="section-number">Toolkit &#xB7; 02</span><div class="section-rule"></div></div>
     <h2>Copyright, Fair Use &amp; the Documentary</h2>
-    <p class="section-intro">Copyright is not a technicality &#8212; it&#8217;s the legal structure that governs whether you can use other people&#8217;s creative and intellectual work in your own film. Understanding it protects you and makes you a more ethical researcher. Student documentary filmmakers have real, defensible rights under fair use. The important thing is to know where those rights begin and end.</p>
+    <p class="section-intro">Copyright governs whether you can legally use someone else&#8217;s creative work in your film. Understanding the basics protects you. It also makes you a more ethical researcher. The short version: government documents are usually free; everything else requires a license, a public domain status check, or a defensible fair use argument.</p>
 
     <div class="subsection">
       <h3>What Copyright Covers (and What It Doesn&#8217;t)</h3>
-      <p>Copyright protects <em>original creative works</em> &#8212; photographs, films, recordings, written texts, artworks &#8212; from the moment of their creation. You need permission (or a license) to use copyrighted material, unless an exception applies.</p>
-      <p>Copyright does <em>not</em> protect facts, ideas, historical events, or government documents produced by U.S. federal employees as part of their official duties. This is why NARA and LOC materials are often in the public domain: much of what the federal government produces belongs to the public by law.</p>
-      <div class="callout"><div class="callout-label">Key Concept &#8212; Public Domain</div><p>Works in the <strong>public domain</strong> are free for any use &#8212; no license, no attribution required (though attributing them is still good scholarly practice). In the U.S., works published before 1928 are generally in the public domain. Works from 1928 onward have varying copyright status depending on registration and renewal. Use the <a href="https://copyright.cornell.edu/publicdomain" target="_blank">Cornell Copyright Chart</a> to check.</p></div>
+      <p>Copyright protects <em>original creative works</em> (photographs, films, recordings, written texts, artworks) from the moment of their creation. You need permission or a license to use copyrighted material, unless an exception applies.</p>
+      <p>Copyright does <em>not</em> protect facts, ideas, historical events, or government documents produced by federal employees as part of their official duties. This is why NARA and LOC materials are often in the public domain: federal government output largely belongs to the public by law. This is your best asset as a documentary filmmaker.</p>
+      <div class="callout"><div class="callout-label">Key Concept &#8212; Public Domain</div><p>Works in the <strong>public domain</strong> are free for any use &#8212; no license, no attribution required (though attributing them is still good scholarly practice). In the U.S., works published through 1930 are generally in the public domain (the cutoff advances by one year every January 1st). Works published from 1931 onward have varying copyright status depending on registration and renewal. Use the <a href="https://copyright.cornell.edu/publicdomain" target="_blank">Cornell Copyright Chart</a> to check.</p></div>
     </div>
 
     <div class="subsection">
       <h3>Fair Use: What It Actually Means</h3>
-      <p>Fair use (Section 107 of the U.S. Copyright Act) is a <em>legal defense</em>, not a blanket permission. It allows the use of copyrighted material without a license in certain circumstances, evaluated case by case using four factors. All four must be weighed together &#8212; no single factor is decisive.</p>
+      <p>Fair use (Section 107 of the U.S. Copyright Act) is a <em>legal defense</em>, not a blanket permission. It allows use of copyrighted material without a license in certain circumstances, evaluated case by case on four factors. All four must be weighed together. No single factor is decisive on its own.</p>
       <div class="def-list">
-        <div class="def-item"><div class="def-term">Factor 1<br>Purpose &amp; Character</div><div class="def-desc">Is your use transformative &#8212; does it add new meaning, commentary, or criticism? Educational, nonprofit uses weigh in your favor. Reproducing something just to avoid licensing fees does not.</div></div>
-        <div class="def-item"><div class="def-term">Factor 2<br>Nature of the Work</div><div class="def-desc">Is the original work factual (like a news photograph) or highly creative (like a painting or song)? Using factual works is more likely to be fair use than using works with high creative investment.</div></div>
-        <div class="def-item"><div class="def-term">Factor 3<br>Amount Used</div><div class="def-desc">Did you use a small portion, or the entire work? Reproducing a full song, article, or film clip weighs against fair use. Using a short excerpt to make a specific analytical point weighs in your favor.</div></div>
-        <div class="def-item"><div class="def-term">Factor 4<br>Market Effect</div><div class="def-desc">Does your use harm the market for the original? This is the most heavily weighted factor. A student film shared privately via Google Drive has minimal market impact; the same film posted publicly on YouTube is a different calculation.</div></div>
+        <div class="def-item"><div class="def-term">Factor 1<br>Purpose &amp; Character</div><div class="def-desc">Is your use transformative: does it add new meaning, commentary, or criticism? Educational, nonprofit uses weigh in your favor. Reproducing something solely to avoid a licensing fee does not.</div></div>
+        <div class="def-item"><div class="def-term">Factor 2<br>Nature of the Work</div><div class="def-desc">Is the original work factual (a news photograph, a government report) or highly creative (a painting, a song, a novel)? Using factual works tilts toward fair use. Highly creative works receive stronger protection.</div></div>
+        <div class="def-item"><div class="def-term">Factor 3<br>Amount Used</div><div class="def-desc">Did you use a small portion, or the entire work? Reproducing a full song, article, or film clip weighs against fair use. A brief excerpt used to make a specific analytical point weighs in your favor.</div></div>
+        <div class="def-item"><div class="def-term">Factor 4<br>Market Effect</div><div class="def-desc">Does your use harm the market for the original? This is the most heavily weighted factor. A student film submitted privately has minimal market impact. That same film posted publicly on YouTube is a different calculation entirely.</div></div>
       </div>
-      <div class="callout warn"><div class="callout-label">Common Misconception</div><p>&#8220;Educational use&#8221; is not a magic phrase. It&#8217;s one element of Factor 1, not a get-out-of-jail-free card. Many student projects assume fair use covers everything in a school context &#8212; this is not accurate. The four factors still apply, and a publicly posted film using a copyrighted song is a real legal exposure.</p></div>
-    </div>
-
-    <div class="subsection">
-      <h3>Fair Use Self-Check</h3>
-      <p>Before using a piece of copyrighted material in your documentary, work through all four factors below. Select the option that best describes your situation &#8212; when all four are answered, you&#8217;ll receive a risk assessment with guidance on how to proceed.</p>
-      <div class="interactive-block">
-        <div class="interactive-header">
-          <div class="ih-icon"><svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-          <div><h4>Four-Factor Fair Use Evaluator</h4><p>For evaluating a specific copyrighted source you want to use in your film</p></div>
-        </div>
-        <div class="interactive-body">
-          <div class="fu-factor" id="fu-1">
-            <div class="fu-factor-header" onclick="toggleFactor('fu-1')" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFactor('fu-1')">
-              <span class="fu-factor-title">Factor 1 &#8212; Purpose &amp; Character of Use</span>
-              <div style="display:flex;align-items:center;gap:.5rem;"><span class="fu-factor-status unanswered" id="fu-1-status">Unanswered</span><svg class="fu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></div>
-            </div>
-            <div class="fu-factor-body">
-              <p class="fu-factor-desc">Is your use transformative &#8212; does it comment on, criticize, analyze, or recontextualize the original? Or are you using it primarily as a substitute for finding a licensed or free alternative?</p>
-              <div class="fu-radio-group">
-                <label><input type="radio" name="fu1" value="favors" onchange="updateFactor('fu-1','favors')"> My use is transformative: I&#8217;m analyzing, criticizing, or commenting on the original work within my documentary argument.</label>
-                <label><input type="radio" name="fu1" value="neutral" onchange="updateFactor('fu-1','neutral')"> My use is educational and nonprofit, but not strongly transformative &#8212; I&#8217;m using it mainly for illustration or context.</label>
-                <label><input type="radio" name="fu1" value="against" onchange="updateFactor('fu-1','against')"> My use reproduces the work primarily to avoid licensing, or to use it as entertainment rather than analysis.</label>
-              </div>
-            </div>
-          </div>
-          <div class="fu-factor" id="fu-2">
-            <div class="fu-factor-header" onclick="toggleFactor('fu-2')" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFactor('fu-2')">
-              <span class="fu-factor-title">Factor 2 &#8212; Nature of the Original Work</span>
-              <div style="display:flex;align-items:center;gap:.5rem;"><span class="fu-factor-status unanswered" id="fu-2-status">Unanswered</span><svg class="fu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></div>
-            </div>
-            <div class="fu-factor-body">
-              <p class="fu-factor-desc">Factual works (news photos, government reports) are more open to fair use. Highly creative works (songs, paintings, fiction) get stronger copyright protection.</p>
-              <div class="fu-radio-group">
-                <label><input type="radio" name="fu2" value="favors" onchange="updateFactor('fu-2','favors')"> The work is primarily factual &#8212; a news photograph, documentary footage, government document, or journalistic text.</label>
-                <label><input type="radio" name="fu2" value="neutral" onchange="updateFactor('fu-2','neutral')"> The work is a mix &#8212; documentary or informational in nature but with significant creative elements.</label>
-                <label><input type="radio" name="fu2" value="against" onchange="updateFactor('fu-2','against')"> The work is highly creative &#8212; a song, painting, screenplay, novel, or other work of artistic expression.</label>
-              </div>
-            </div>
-          </div>
-          <div class="fu-factor" id="fu-3">
-            <div class="fu-factor-header" onclick="toggleFactor('fu-3')" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFactor('fu-3')">
-              <span class="fu-factor-title">Factor 3 &#8212; Amount &amp; Substantiality Used</span>
-              <div style="display:flex;align-items:center;gap:.5rem;"><span class="fu-factor-status unanswered" id="fu-3-status">Unanswered</span><svg class="fu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></div>
-            </div>
-            <div class="fu-factor-body">
-              <p class="fu-factor-desc">How much of the original work are you using, and is what you&#8217;re using its most recognizable or valuable part?</p>
-              <div class="fu-radio-group">
-                <label><input type="radio" name="fu3" value="favors" onchange="updateFactor('fu-3','favors')"> A small, specific excerpt &#8212; only what&#8217;s necessary to make my analytical point.</label>
-                <label><input type="radio" name="fu3" value="neutral" onchange="updateFactor('fu-3','neutral')"> A moderate portion &#8212; more than a brief clip but less than the whole work, and not its single most iconic part.</label>
-                <label><input type="radio" name="fu3" value="against" onchange="updateFactor('fu-3','against')"> The full work, or its most recognizable and valuable portion (e.g., a song&#8217;s entire chorus, a film&#8217;s climactic scene).</label>
-              </div>
-            </div>
-          </div>
-          <div class="fu-factor" id="fu-4">
-            <div class="fu-factor-header" onclick="toggleFactor('fu-4')" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')toggleFactor('fu-4')">
-              <span class="fu-factor-title">Factor 4 &#8212; Effect on the Market (Most Important)</span>
-              <div style="display:flex;align-items:center;gap:.5rem;"><span class="fu-factor-status unanswered" id="fu-4-status">Unanswered</span><svg class="fu-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></div>
-            </div>
-            <div class="fu-factor-body">
-              <p class="fu-factor-desc">This is the most heavily weighted factor. Does your use substitute for someone buying or licensing the original? Where and how widely will your film be seen?</p>
-              <div class="fu-radio-group">
-                <label><input type="radio" name="fu4" value="favors" onchange="updateFactor('fu-4','favors')"> My film will be seen only by a small classroom audience or submitted privately &#8212; it doesn&#8217;t substitute for purchasing the original.</label>
-                <label><input type="radio" name="fu4" value="neutral" onchange="updateFactor('fu-4','neutral')"> My film may be shared within school or with a small invited audience &#8212; limited distribution, but not entirely private.</label>
-                <label><input type="radio" name="fu4" value="against" onchange="updateFactor('fu-4','against')"> My film will be posted publicly (YouTube, social media, school website) where it could reach a wide audience.</label>
-              </div>
-            </div>
-          </div>
-          <button class="btn-primary" onclick="evaluateFairUse()" style="margin-top:1rem;">Evaluate My Fair Use Argument</button>
-          <div class="fu-result" id="fu-result" role="region" aria-live="polite">
-            <div class="fu-result-bar" role="presentation"><div class="fu-result-fill" id="fu-fill"></div></div>
-            <div class="fu-result-verdict" id="fu-verdict"></div>
-            <div class="fu-result-note" id="fu-note"></div>
-            <div class="fu-disclaimer">This tool is for educational purposes only. It reflects general principles of U.S. copyright law but does not constitute legal advice. Fair use determinations are made case by case by courts. When in doubt, choose a source that requires no fair use argument at all.</div>
-          </div>
-        </div>
-      </div>
+      <div class="callout warn"><div class="callout-label">Common Misconception</div><p>&#8220;Educational use&#8221; is not a magic phrase. It is one element of Factor 1: not a blanket clearance, not a get-out-of-jail-free card. The four factors still apply. A publicly posted film using a copyrighted song is a real legal exposure, regardless of the school context.</p></div>
     </div>
 
     <div class="subsection">
       <h3>Reading Creative Commons Licenses</h3>
-      <p>Many of the images and recordings you&#8217;ll find in open archives carry Creative Commons (CC) licenses rather than full copyright or full public domain status. The key is to read the specific license on each item. Do not assume.</p>
+      <p>Many items in open archives carry Creative Commons (CC) licenses: not fully copyrighted, not fully public domain. Read the specific license on each item. Do not assume. The label on the tin matters.</p>
       <div class="cc-grid">
         <div class="cc-badge ok"><div class="cc-type">CC0 / Public Domain Mark</div><div class="cc-meaning">No rights reserved. Use freely for any purpose. Attribution is good practice but not required.</div></div>
         <div class="cc-badge ok"><div class="cc-type">CC BY</div><div class="cc-meaning">Use freely, including commercially. You must credit the creator with name, source, and license.</div></div>
@@ -509,9 +336,9 @@
 <!-- SECTION 3: TOPIC INDEX -->
 <section id="topics">
   <div class="section-wrap" style="max-width:1040px;">
-    <div class="section-divider"><span class="section-number">Toolkit &#xB7; 03</span><div class="section-rule"></div></div>
+    <div class="section-divider"><div class="section-rule"></div><span class="section-number">Toolkit &#xB7; 03</span><div class="section-rule"></div></div>
     <h2>Topic Index</h2>
-    <p class="section-intro">Each card below gives you a framing hook, curated starter sources, and archival leads specific to your topic. The discipline tags indicate which interdisciplinary threads are most richly developed for that subject. Use them to find topics that match your documentary angle. These are starting points: follow the footnotes, chase the subject headings, and let the sources lead you somewhere your initial search didn&#8217;t anticipate.</p>
+    <p class="section-intro">Each card below is a dossier: a framing hook, curated starter sources, and archival leads specific to your topic. The discipline tags indicate which interdisciplinary threads run deepest for each subject. These are starting points, not endpoints. Follow the footnotes. Chase the subject headings. Let the sources take you somewhere your initial briefing didn&#8217;t anticipate.</p>
     <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2.5rem;"><span style="background:var(--navy);color:var(--cream);padding:.2rem .65rem;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:.82rem;"><span class="thread-tag sci" style="color:rgba(244,237,224,.85);border-color:rgba(244,237,224,.4);">SCI</span>Science & Tech</span><span style="background:var(--navy);color:var(--cream);padding:.2rem .65rem;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:.82rem;"><span class="thread-tag math" style="color:rgba(244,237,224,.85);border-color:rgba(244,237,224,.4);">MATH</span>Math & Data</span><span style="background:var(--navy);color:var(--cream);padding:.2rem .65rem;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:.82rem;"><span class="thread-tag art" style="color:rgba(244,237,224,.85);border-color:rgba(244,237,224,.4);">ART</span>Art & Design</span><span style="background:var(--navy);color:var(--cream);padding:.2rem .65rem;display:inline-flex;align-items:center;gap:.4rem;font-family:var(--font-mono);font-size:.82rem;"><span class="thread-tag lit" style="color:rgba(244,237,224,.85);border-color:rgba(244,237,224,.4);">LIT</span>Narrative & Media</span></div>
 
     <div class="topic-category">
@@ -520,18 +347,18 @@
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">01</div><div><div class="topic-title">The Nuclear Age</div><div class="topic-threads"><span class="thread-tag sci">SCI</span><span class="thread-tag math">MATH</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">The transition from fission to fusion &#8212; from atomic bomb to hydrogen bomb &#8212; produced a weapons escalation so extreme that the only rational strategy became the permanent, mutual threat of total annihilation.</p>
+      <p class="topic-hook">The bomb got bigger. Then bigger still. By the time both superpowers had hydrogen weapons capable of ending civilization, the only coherent policy was to promise exactly that. They called it Mutual Assured Destruction &#8212; a name coined in 1962 by Donald Brennan, a critic of the doctrine, who chose the acronym deliberately to argue the policy was irrational. The insult stuck.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://nsarchive.gwu.edu/project/nuclear-vault" target="_blank">NSA Archive: The Nuclear Vault</a> &#8212; Declassified planning documents, targeting lists, and strategic assessments from U.S. and Soviet archives. The deepest public primary source collection on weapons development and arms race strategy.</li>
-        <li><a href="https://ahf.nuclearmuseum.org/history/nuclear-testing-1945-1992" target="_blank">Atomic Heritage Foundation: Nuclear Testing History</a> &#8212; Primary documents, photographs, and oral histories from the Manhattan Project through the hydrogen bomb program. Now part of the National Museum of Nuclear Science and History.</li>
+        <li><a href="https://ahf.nuclearmuseum.org/ahf/history-page-type/cold-war-history/" target="_blank">Atomic Heritage Foundation: Nuclear Testing History</a> &#8212; Primary documents, photographs, and oral histories from the Manhattan Project through the hydrogen bomb program. Now part of the National Museum of Nuclear Science and History.</li>
         <li><a href="https://www.loc.gov/search/?q=hydrogen+bomb+nuclear+arms+race&dates=1945%2F1965" target="_blank">LOC: Nuclear Arms Race, 1945&#8211;1965</a> &#8212; Press photographs, civil defense publications, and government materials documenting the public face of the arms race.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>The Wilson Center Cold War International History Project has Soviet-side documents on weapons development &#8212; essential for a balanced account. The RAND Corporation&#8217;s history page (rand.org/about/history.html) links to declassified Cold War deterrence reports, including original game theory and MAD strategy documents by Herman Kahn and others. Search Prelinger Archives for &#8220;civil defense&#8221; and &#8220;atomic bomb&#8221; for public domain government films.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>The Wilson Center Cold War International History Project has Soviet-side documents on weapons development &#8212; essential for a balanced account. The RAND Corporation&#8217;s history page (rand.org/about/history.html) links to declassified Cold War nuclear strategy reports, including original game theory and deterrence documents by Herman Kahn and others. (Note: Kahn was a critic of MAD, not its architect; his work argued for flexible, survivable nuclear strategies rather than mutual destruction.) Search Prelinger Archives for &#8220;civil defense&#8221; and &#8220;atomic bomb&#8221; for public domain government films.</p></div>
     </div>
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">02</div><div><div class="topic-title">The Space Race</div><div class="topic-threads"><span class="thread-tag sci">SCI</span><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">From Sputnik (1957) to Apollo 11 (1969), the Space Race compressed two decades of aeronautical engineering into a single political emergency &#8212; and permanently reshaped American education, science funding, and national identity.</p>
+      <p class="topic-hook">On October 4, 1957, a Soviet satellite the size of a beach ball went into orbit and began beeping. That sound produced twelve years of American panic, policy, and engineering achievement. It also permanently reorganized the federal education budget. One beep. Enormous consequences.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.nasa.gov/history/" target="_blank">NASA History Division</a> &#8212; The definitive open-access source: primary documents, mission reports, oral histories, and image galleries covering Sputnik, Explorer 1, Project Mercury, Saturn V, and Apollo. Most materials are public domain.</li>
         <li><a href="https://airandspace.si.edu/explore" target="_blank">Smithsonian Air and Space Museum: Collections</a> &#8212; Object photography and artifact records for Sputnik replicas, Mercury capsules, Saturn V hardware, and Apollo equipment. Open Access; high-resolution downloads available.</li>
@@ -542,18 +369,18 @@
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">03</div><div><div class="topic-title">Concrete Continent</div><div class="topic-threads"><span class="thread-tag sci">SCI</span><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span></div></div></div>
-      <p class="topic-hook">The 1956 Federal Aid Highway Act authorized 41,000 miles of interstate highway &#8212; officially justified as a civil defense evacuation network, but practically the infrastructure that made suburban sprawl, car culture, and the franchise economy possible.</p>
+      <p class="topic-hook">Eisenhower sold Congress on 41,000 miles of highway by framing it as civil defense infrastructure: the bomb drops, the cities evacuate, the system pays for itself. Convenient that it also made suburban sprawl, car culture, and the hamburger franchise physically possible. Two justifications. One system. Billions of dollars.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.fhwa.dot.gov/infrastructure/history.cfm" target="_blank">Federal Highway Administration: Interstate History</a> &#8212; Official FHWA history of the system, including the 1956 Act, original planning maps, and Eisenhower&#8217;s role. Primary documents and construction photographs.</li>
         <li><a href="https://www.eisenhowerlibrary.gov/research/online-documents" target="_blank">Eisenhower Presidential Library: Online Documents</a> &#8212; Digitized records from Eisenhower&#8217;s presidency, including highway planning documents and the National Security justification for the interstate system.</li>
         <li><a href="https://www.loc.gov/search/?q=interstate+highway+1956+federal+aid&dates=1950%2F1965" target="_blank">LOC: Interstate Highway, 1950&#8211;1965</a> &#8212; Aerial photographs, engineering drawings, and press coverage of construction. Search also &#8220;suburbanization&#8221; for the domestic development context.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Search NARA for Bureau of Public Roads records (Record Group 30). The LOC Prints &amp; Photographs division has exceptional aerial photography of highway construction across the country. Prelinger Archives has promotional films from the Federal Highway Administration. Eisenhower&#8217;s 1919 military convoy diary and his WWII experience with the Autobahn are key primary sources for understanding why he championed the system.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Search NARA for Bureau of Public Roads records (Record Group 30). The LOC Prints &amp; Photographs division has exceptional aerial photography of highway construction across the country. Prelinger Archives has promotional films from the Federal Highway Administration. Eisenhower&#8217;s 1919 military convoy report (a November 1919 memorandum to the Chief of the Motor Transport Corps, available via the Eisenhower Library) and his WWII experience with the Autobahn are key primary sources for understanding why he championed the system.</p></div>
     </div>
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">04</div><div><div class="topic-title">The Silicon Revolution</div><div class="topic-threads"><span class="thread-tag sci">SCI</span><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span></div></div></div>
-      <p class="topic-hook">The arc from vacuum tube to transistor to integrated circuit &#8212; from ENIAC (1945) to Bell Labs (1947) to the IBM 701 (1952) &#8212; was the technical foundation underneath every other Cold War innovation. Without it, there is no Space Race, no missile guidance, no modern economy.</p>
+      <p class="topic-hook">Everything else in this toolkit &#8212; the missiles, the moon shots, the propaganda apparatus &#8212; ran on one invention: a sliver of semiconductor smaller than a fingernail. The transistor arrived at Bell Labs in 1947. Almost nobody recognized what had happened. The arc from vacuum tube to integrated circuit was the technical foundation underneath every other Cold War development.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.computerhistory.org/collections/" target="_blank">Computer History Museum Collections</a> &#8212; Oral histories, artifacts, and technical documents on ENIAC, the transistor, integrated circuits, and early IBM mainframes. Searchable online with strong Cold War-era holdings.</li>
         <li><a href="https://archive.org/search?query=bell+labs+transistor+film&mediatype=movies" target="_blank">Internet Archive: AT&amp;T / Bell Labs Films</a> &#8212; Bell Labs produced exceptional public-domain educational films explaining the physics of solid-state electronics and the transistor&#8217;s development.</li>
@@ -564,18 +391,18 @@
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">05</div><div><div class="topic-title">The Electric Living Room</div><div class="topic-threads"><span class="thread-tag sci">SCI</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">Wartime radar technology entered the American home as the television set, the color CRT, and the microwave oven &#8212; transforming domestic space into both a site of consumption and the primary delivery mechanism for Cold War culture.</p>
+      <p class="topic-hook">The microwave oven came directly from wartime radar research: Percy Spencer, a Raytheon engineer, noticed a candy bar melt near an active magnetron in 1945. Television technology had deeper prewar roots &#8212; the CRT was invented in 1897 and commercial TV sets existed before the war &#8212; but wartime electronics manufacturing scaled the industry, and postwar Americans bought television sets by the millions. By 1955, roughly two-thirds of American households had one. What went into the box shaped how the Cold War looked and felt to people eating dinner. Domestic space became both a market and a broadcast channel.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.si.edu/openaccess" target="_blank">Smithsonian Open Access: Domestic Technology</a> &#8212; Search &#8220;television,&#8221; &#8220;microwave oven,&#8221; &#8220;color television,&#8221; and &#8220;RCA&#8221; for artifact photography and object records spanning the late 1940s through the 1960s.</li>
         <li><a href="https://www.loc.gov/search/?q=television+advertising+1950s&dates=1948%2F1965" target="_blank">LOC: Television &amp; Advertising, 1948&#8211;1965</a> &#8212; Press photographs, TV Guide covers, and advertising imagery documenting the transformation of the American living room and television&#8217;s role in Cold War culture.</li>
         <li><a href="https://archive.org/details/prelinger" target="_blank">Prelinger Archives: Television Industry Films</a> &#8212; Search &#8220;RCA,&#8221; &#8220;color television,&#8221; and &#8220;kitchen of the future&#8221; for promotional and educational films from broadcasters and appliance manufacturers.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>The &#8220;Kitchen Debate&#8221; (Nixon and Khrushchev, July 1959) directly connects domestic appliance technology to Cold War ideology &#8212; search NARA and the Nixon Presidential Library for footage and transcripts. The LOC&#8217;s American Broadcasting Collection (finding aid online) covers the early television industry. Search Chronicling America for contemporaneous TV criticism and advertising copy.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>The &#8220;Kitchen Debate&#8221; (Nixon and Khrushchev, July 1959) directly connects domestic appliance technology to Cold War ideology &#8212; search NARA and the Nixon Presidential Library for footage and transcripts. The LOC&#8217;s NBC Television Collection (18,000 programs, 1948&#8211;1977; access restricted to on-site use at the LOC) and the American Archive of Public Broadcasting (americanarchive.org), a GBH&#8211;LOC collaboration with an online reading room, cover the early television industry. Search Chronicling America for contemporaneous TV criticism and advertising copy.</p></div>
     </div>
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">06</div><div><div class="topic-title">The Polio Vaccine</div><div class="topic-threads"><span class="thread-tag sci">SCI</span><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">Jonas Salk&#8217;s 1955 announcement was one of the first public health events covered live on television &#8212; a moment when science became collective spectacle, and a masterclass in public health graphic design and statistical methodology.</p>
+      <p class="topic-hook">In 1954, nearly two million children participated in the largest controlled medical experiment in history. On April 12, 1955, at a press conference at the University of Michigan, Thomas Francis Jr. &#8212; the physician who directed the field trial evaluation &#8212; announced the results; the news was carried immediately by wire services and radio and television newscasts across the country. Science became collective spectacle; a generation of parents wept in the streets. The trial&#8217;s statistical design is also, for the Math thread, a masterclass in how methodology shapes results.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://collections.nlm.nih.gov/" target="_blank">NLM Digital Collections: Polio &amp; Public Health History</a> &#8212; Search &#8220;polio,&#8221; &#8220;Salk,&#8221; or &#8220;March of Dimes&#8221; in the National Library of Medicine&#8217;s digitized collections. Includes photographs, films, and publications from the 1954 field trial and 1955 announcement.</li>
         <li><a href="https://www.loc.gov/search/?q=polio+vaccine+1955&dates=1950%2F1960" target="_blank">LOC: Polio, 1950&#8211;1960</a> &#8212; Photographs of the March of Dimes campaign, vaccination lines, and Salk press coverage. Rich for the Art/Design thread.</li>
@@ -586,13 +413,13 @@
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">07</div><div><div class="topic-title">The Environmental Crisis &amp; Movement</div><div class="topic-threads"><span class="thread-tag sci">SCI</span><span class="thread-tag lit">LIT</span><span class="thread-tag math">MATH</span></div></div></div>
-      <p class="topic-hook">More than a century of industrial development had contaminated the air, water, and soil of the world&#8217;s wealthiest nation &#8212; and Rachel Carson&#8217;s <em>Silent Spring</em> (1962) triggered a public reckoning that reshaped American law, science, and politics within a decade.</p>
+      <p class="topic-hook">By 1962, the factories had been contaminating the water, air, and food supply for over a century. Then a marine biologist named Rachel Carson wrote a book about it. The chemical industry trade group tried to destroy her reputation. It did not succeed. Within a decade, American environmental law had been rewritten.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.loc.gov/search/?q=rachel+carson+silent+spring+environment&dates=1955%2F1970" target="_blank">LOC: Rachel Carson &amp; the Environmental Movement, 1955&#8211;1970</a> &#8212; Photographs, press coverage, and government publications documenting both Carson&#8217;s work and the legislative response. Search also &#8220;DDT,&#8221; &#8220;air pollution,&#8221; and &#8220;water pollution.&#8221;</li>
         <li><a href="https://www.si.edu/openaccess" target="_blank">Smithsonian Open Access: Natural History &amp; Conservation</a> &#8212; Search &#8220;environmental movement,&#8221; &#8220;conservation,&#8221; and &#8220;Rachel Carson&#8221; for objects, exhibition materials, and archival photographs documenting the emergence of environmentalism as a popular movement.</li>
         <li><a href="https://archive.org/search?query=pollution+environment+conservation+1950s+1960s&mediatype=movies" target="_blank">Internet Archive: Environmental Documentary Films</a> &#8212; Search &#8220;water pollution,&#8221; &#8220;conservation,&#8221; and &#8220;DDT&#8221; for government and advocacy films from the era. Strong B-roll potential.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Rachel Carson&#8217;s papers are held at the Beinecke Rare Book &amp; Manuscript Library (Yale); a finding aid is available online. <em>Silent Spring</em> itself (1962) is the central primary text &#8212; available via library catalog. The Senate hearings on pesticides that followed publication are in the Congressional Record (Congress.gov). For the Math thread, the statistical data on DDT accumulation and species decline that Carson used is documented in the EPA&#8217;s historical records and cited in subsequent scientific literature available via JSTOR. The Clean Air Act (1963) and Water Quality Act (1965) are the direct legislative outcomes &#8212; both available via Congress.gov.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Rachel Carson&#8217;s papers are held at the Beinecke Rare Book &amp; Manuscript Library (Yale); a finding aid is available online. <em>Silent Spring</em> itself (1962) is the central primary text &#8212; available via library catalog. The Senate hearings on pesticides that followed publication are in the Congressional Record (Congress.gov). For the Math thread, the statistical data on DDT accumulation and species decline that Carson drew on came from USDA research and published scientific literature from the 1950s &#8212; search JSTOR for peer-reviewed studies on organochlorine pesticides and wildlife; the EPA&#8217;s own history page (epa.gov) documents the regulatory response from 1970 onward. The Clean Air Act (1963) and Water Quality Act (1965) are the direct legislative outcomes &#8212; both available via Congress.gov.</p></div>
     </div>
 
       </div>
@@ -604,7 +431,7 @@
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">08</div><div><div class="topic-title">McDonald&#8217;s &amp; the Franchise Empire</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">McDonald&#8217;s applied assembly-line manufacturing logic to food service &#8212; and Ray Kroc&#8217;s franchising model turned a California burger stand into the template for the modern American service economy and global brand.</p>
+      <p class="topic-hook">Ray Kroc did not invent the hamburger. He invented a system for producing the same hamburger in the same amount of time in Duluth as in Pasadena. That system &#8212; applied to food, real estate, and labor &#8212; became the template for the American service economy. The product was almost incidental.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.loc.gov/search/?q=mcdonalds+fast+food+franchise+1950s&dates=1950%2F1965" target="_blank">LOC: McDonald&#8217;s &amp; Fast Food, 1950&#8211;1965</a> &#8212; Advertising imagery, trade press coverage, and franchise documentation from the Kroc era.</li>
         <li><a href="https://archive.org/search?query=mcdonalds+1950s+advertising+film&mediatype=movies" target="_blank">Internet Archive: McDonald&#8217;s Promotional Films</a> &#8212; Early training and promotional films; some Ray Kroc-era materials are in the public domain.</li>
@@ -615,7 +442,7 @@
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">09</div><div><div class="topic-title">Disney &amp; the Theme Park</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">Disneyland (1955) invented the theme park as a new medium &#8212; a three-dimensional, walk-through narrative space that applied film production design logic to architecture and crowd management, and became the first &#8220;Organization Man&#8221; entertainment corporation at scale.</p>
+      <p class="topic-hook">Disneyland opened in Anaheim in July 1955. It promptly overheated, ran out of water, and became a symbol of American optimism anyway. Walt Disney had invented something new: a physical space designed to put visitors inside a story. The theme park was, among other things, a medium.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.loc.gov/search/?q=disneyland+disney+1955+theme+park&dates=1950%2F1965" target="_blank">LOC: Disneyland &amp; Disney, 1950&#8211;1965</a> &#8212; Press photographs, newspaper coverage, and advertising materials from the 1955 opening and the first decade of operation.</li>
         <li><a href="https://archive.org/search?query=disneyland+walt+disney+1950s+television&mediatype=movies" target="_blank">Internet Archive: Walt Disney Television Films</a> &#8212; Disney&#8217;s &#8220;Disneyland&#8221; ABC series (1954&#8211;1961) was the first major film studio to produce network television; several episodes promoting Tomorrowland are in the public domain.</li>
@@ -626,32 +453,32 @@
 
     <div class="topic-card">
       <div class="topic-header"><div class="topic-num" aria-hidden="true">10</div><div><div class="topic-title">Levittown: Blueprint of Suburbia</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">Levittown applied assembly-line construction to housing, producing 17,000 homes at a peak rate of up to 30 per day &#8212; and its racially restrictive covenants ensured that the postwar &#8220;American Dream&#8221; was architecturally encoded as white.</p>
+      <p class="topic-hook">William Levitt could build a house in 27 steps. By 1951, he had built 17,000 of them on Long Island, at a peak rate of up to 30 per day. Each sale came with a racially restrictive deed covenant. The postwar American Dream came with an asterisk the size of a suburb.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.loc.gov/search/?q=levittown+suburb+1950s&dates=1945%2F1965" target="_blank">LOC: Levittown &amp; Suburbia, 1945&#8211;1965</a> &#8212; Aerial photographs, press coverage, and advertising materials documenting construction and cultural reception.</li>
         <li><a href="https://dp.la/search?q=levittown+pennsylvania" target="_blank">DPLA: Levittown, Pennsylvania Collections</a> &#8212; Aggregates digitized materials from Pennsylvania repositories; search for photographs, maps, and documents from the Bucks County community.</li>
         <li><a href="https://archive.org/search?query=suburbia+levittown+postwar+housing&mediatype=movies" target="_blank">Internet Archive: Postwar Housing Films</a> &#8212; Search &#8220;Federal Housing Administration&#8221; and &#8220;GI Bill housing&#8221; for mid-century promotional and documentary films in the public domain.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Kenneth Jackson&#8217;s <em>Crabgrass Frontier</em> (1985) is the essential secondary source. Search LOC for &#8220;redlining&#8221; and &#8220;restrictive covenants&#8221; &#8212; this is essential historical context, not optional. FRASER has demographic and housing start data from the postwar boom for the Math thread. The NAACP archives (LOC) document resistance to racial exclusion in postwar suburbs.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Kenneth Jackson&#8217;s <em>Crabgrass Frontier</em> (1985) is the essential secondary source. Search LOC for &#8220;redlining&#8221; and &#8220;restrictive covenants&#8221; &#8212; this is essential historical context, not optional. FRASER has demographic and housing start data from the postwar boom for the Math thread. The NAACP archives (LOC Manuscript Division) document resistance to racial exclusion in postwar suburbs; the collection is extensive but requires an in-person LOC reader card and is not available online &#8212; direct students to Katznelson and Jackson as the accessible route to this history.</p></div>
     </div>
 
       </div>
     </div>
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">10</div><div><div class="topic-title">GI Joe: The GI Bill</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span></div></div></div>
-      <p class="topic-hook">The Servicemen&#8217;s Readjustment Act of 1944 was the most transformative piece of social legislation in American history &#8212; and its unequal implementation along racial lines made it simultaneously a story of extraordinary opportunity and structural exclusion.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">11</div><div><div class="topic-title">GI Joe: The GI Bill</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span></div></div></div>
+      <p class="topic-hook">The Servicemen&#8217;s Readjustment Act of 1944 built the American middle class. It sent millions of veterans to college, financed houses, and seeded small businesses. It also systematically excluded the Black veterans who had earned the same benefits. Same bill. Profoundly different results, by design.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
-        <li><a href="https://www.archives.gov/research/military/ww2/gi-bill" target="_blank">NARA: GI Bill Records</a> &#8212; Original legislative records and Veterans Administration documentation, including statistical data on college enrollment, home loan usage, and small-business participation by demographic.</li>
+        <li><a href="https://www.archives.gov/milestone-documents/servicemens-readjustment-act" target="_blank">NARA: GI Bill Records</a> &#8212; Original legislative records and Veterans Administration documentation, including statistical data on college enrollment, home loan usage, and small-business participation by demographic.</li>
         <li><a href="https://www.loc.gov/search/?q=GI+bill+veterans+1944+1950s&dates=1944%2F1960" target="_blank">LOC: GI Bill, 1944&#8211;1960</a> &#8212; Press photographs, government posters, publications, and advertising documenting the bill&#8217;s implementation and public marketing. Rich for the Art/Design thread.</li>
         <li><a href="https://archive.org/search?query=GI+bill+veterans+benefits+1940s&mediatype=movies" target="_blank">Internet Archive: Veterans&#8217; Benefit Films</a> &#8212; The VA and military produced extensive public-domain films explaining GI Bill benefits; strong B-roll potential for the documentary.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>The original text of the Servicemen&#8217;s Readjustment Act is available via Congress.gov. Ira Katznelson&#8217;s <em>When Affirmative Action Was White</em> (2005) is essential for understanding the racial disparities in implementation &#8212; the NAACP archives (LOC) document Black veterans&#8217; exclusion from many benefits, and this counternarrative is essential context. For the Math thread, FRASER (stlouisfed.org) has postwar housing start and college enrollment data broken down by year.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>The original text of the Servicemen&#8217;s Readjustment Act is available via Congress.gov. Ira Katznelson&#8217;s <em>When Affirmative Action Was White</em> (2005) is essential for understanding the racial disparities in implementation &#8212; the NAACP archives (LOC Manuscript Division) document Black veterans&#8217; exclusion from many benefits, and this counternarrative is essential context &#8212; the collection requires an in-person LOC reader card and is not available online; Katznelson&#8217;s book and the NARA milestone document are the accessible starting points for high school researchers. For the Math thread, FRASER (stlouisfed.org) has postwar housing start and college enrollment data broken down by year.</p></div>
     </div>
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">11</div><div><div class="topic-title">Little Houses: Suburbia &amp; the Sun Belt</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">The postwar migration to suburbs and the Sun Belt was the largest internal population movement in American history &#8212; driven by the GI Bill, the Interstate Highway System, air conditioning, and a consumer culture that defined the good life as a detached house with a yard and a car in the driveway.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">12</div><div><div class="topic-title">Little Houses: Suburbia &amp; the Sun Belt</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
+      <p class="topic-hook">Air conditioning did what the Civil War could not: it made the South and Southwest attractive to Northern transplants. Add the GI Bill, the interstate highway system, and a consumer culture that equated the good life with a yard and a car. The Sun Belt boom was one of the most sweeping demographic shifts in postwar American history.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.census.gov/history/www/through_the_decades/" target="_blank">U.S. Census Bureau: Through the Decades</a> &#8212; Population and housing data from the 1950 and 1960 censuses. Essential for visualizing the statistical scale of suburbanization and Sun Belt growth &#8212; strong data for the Math thread.</li>
         <li><a href="https://www.loc.gov/search/?q=suburban+growth+sunbelt+1950s+housing&dates=1945%2F1965" target="_blank">LOC: Suburban Growth &amp; Sun Belt, 1945&#8211;1965</a> &#8212; Aerial photographs, advertising, and press coverage documenting the look and feel of postwar residential expansion across the South and Southwest.</li>
@@ -661,8 +488,8 @@
     </div>
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">12</div><div><div class="topic-title">The Keynes to Success</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">Keynesian economics &#8212; the idea that government deficit spending can stabilize capitalist economies &#8212; became the dominant policy framework of the Cold War era, justifying the Marshall Plan, the Interstate Highway System, and military buildup alike as strategic economic tools.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">13</div><div><div class="topic-title">The Keynes to Success</div><div class="topic-threads"><span class="thread-tag math">MATH</span><span class="thread-tag lit">LIT</span></div></div></div>
+      <p class="topic-hook">The idea: government deficit spending can stabilize capitalist economies in crisis. The evidence: the Marshall Plan, the interstate highway system, the space program, the defense budget. The politics: almost nobody in power admitted they were doing it. Keynesian economics was the ideology that dared not speak its name.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://fraser.stlouisfed.org/" target="_blank">FRASER (St. Louis Fed): Historical Economic Data</a> &#8212; Digitized Federal Reserve reports, Treasury documents, and economic indicators from the postwar era. Search for Council of Economic Advisers reports and federal budget data from the Truman and Eisenhower administrations.</li>
         <li><a href="https://www.loc.gov/search/?q=marshall+plan+economic+policy+cold+war&dates=1947%2F1965" target="_blank">LOC: Marshall Plan &amp; Economic Policy, 1947&#8211;1965</a> &#8212; Primary documents, photographs, and press coverage of the Marshall Plan and postwar economic policy. Essential for connecting Keynesian theory to Cold War foreign policy practice.</li>
@@ -679,8 +506,8 @@
       <div class="topic-grid">
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">13</div><div><div class="topic-title">Car Culture: The Chevy Corvette</div><div class="topic-threads"><span class="thread-tag art">ART</span><span class="thread-tag math">MATH</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">The Corvette&#8217;s tail fins, chrome, and jet-age aesthetic were a design argument about American identity &#8212; the same technological optimism as Sputnik, marketed to a domestic audience that had just won a world war and wanted to feel like it.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">14</div><div><div class="topic-title">Car Culture: The Chevy Corvette</div><div class="topic-threads"><span class="thread-tag art">ART</span><span class="thread-tag math">MATH</span><span class="thread-tag lit">LIT</span></div></div></div>
+      <p class="topic-hook">In 1953, General Motors unveiled a sleek, European-inspired fiberglass sports car at the GM Motorama in New York. It was an argument, not just a vehicle: the same technological optimism as Sputnik, aimed at a domestic audience that had just won a world war and wanted to feel it. Design as ideology. Horsepower as national statement.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.si.edu/openaccess" target="_blank">Smithsonian Open Access: Automotive Design</a> &#8212; Search &#8220;Chevrolet Corvette,&#8221; &#8220;automobile design 1950s,&#8221; and &#8220;Harley Earl&#8221; for objects, advertisements, and design drawings from the era.</li>
         <li><a href="https://archive.org/search?query=chevrolet+GM+motorama+1950s&mediatype=movies" target="_blank">Internet Archive: GM Motorama Films</a> &#8212; General Motors&#8217; Motorama shows (1953&#8211;1961) debuted the Corvette and &#8220;dream cars&#8221; to the public; promotional films document the space-age aesthetic.</li>
@@ -690,19 +517,19 @@
     </div>
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">14</div><div><div class="topic-title">Abstract Expressionism</div><div class="topic-threads"><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
-      <p class="topic-hook">Abstract Expressionism was the most radical art movement in American history and, according to declassified documents, an instrument of Cold War soft-power diplomacy &#8212; promoted internationally by a CIA cultural program to demonstrate that the U.S. had a living avant-garde.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">15</div><div><div class="topic-title">Abstract Expressionism</div><div class="topic-threads"><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span></div></div></div>
+      <p class="topic-hook">The CIA quietly funded international exhibitions of American abstract art to demonstrate that the United States, unlike the Soviet Union, had a living, free avant-garde. The artists were not always informed of the arrangement. Declassified documents confirmed it decades later. Abstract Expressionism: both a genuine art movement and a covert operation.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.moma.org/collection/works?classifications=9&date_begin=1940&date_end=1965" target="_blank">MoMA Online Collection: AbEx, 1940&#8211;1965</a> &#8212; Browse and research specific works; collection data and artwork images accessible online. Essential for Pollock, Rothko, de Kooning, and Kline.</li>
         <li><a href="https://americanart.si.edu/research" target="_blank">Smithsonian American Art Museum: Research</a> &#8212; Open-access artwork images, exhibition records, and the Archives of American Art. The definitive institutional repository for artist papers and gallery records.</li>
-        <li><a href="https://www.smithsonianmag.com/arts-culture/was-modern-art-really-a-cia-weapon-132682235/" target="_blank">Smithsonian Magazine: &#8220;Was Modern Art Really a CIA Weapon?&#8221;</a> &#8212; Well-sourced overview of the cultural diplomacy program documented by historian Frances Stonor Saunders. A model of how to connect art history to Cold War politics.</li>
+        <li><a href="https://daily.jstor.org/was-modern-art-really-a-cia-psy-op/" target="_blank">JSTOR Daily: &#8220;Was Modern Art Really a CIA Psy-Op?&#8221;</a> &#8212; Well-sourced overview of the cultural diplomacy program connecting art history to Cold War politics. Free to access; draws on the same scholarly record as the Frances Stonor Saunders research.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Key primary sources include Clement Greenberg&#8217;s &#8220;American-Type Painting&#8221; (1955) and Hans Namuth&#8217;s photographs and films of Pollock painting (1950) &#8212; available via the Smithsonian Archives of American Art. Frances Stonor Saunders&#8217;s <em>The Cultural Cold War</em> (2000) is the essential secondary text on the CIA connection. Meyer Schapiro&#8217;s contemporaneous essays (available via HathiTrust) document the critical reception.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Key primary sources include Clement Greenberg&#8217;s &#8220;American-Type Painting&#8221; (1955) and Hans Namuth&#8217;s photographs and films of Pollock painting (1950) &#8212; available via the Smithsonian Archives of American Art. Frances Stonor Saunders&#8217;s <em>The Cultural Cold War</em> (2000) is the essential secondary text on the CIA connection. Meyer Schapiro&#8217;s contemporaneous essays &#8212; especially &#8220;The Liberating Quality of Avant-Garde Art&#8221; (<em>ArtNews</em>, 1957) &#8212; document the critical reception. Search JSTOR or your library&#8217;s databases; the collected volume <em>Modern Art: 19th and 20th Centuries</em> (Braziller, 1978) is available via library catalog.</p></div>
     </div>
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">15</div><div><div class="topic-title">Rock &#8217;n&#8217; Roll</div><div class="topic-threads"><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span><span class="thread-tag sci">SCI</span></div></div></div>
-      <p class="topic-hook">Elvis, Chuck Berry, and Little Richard did not invent rock &#8217;n&#8217; roll &#8212; they were the moment when Black American musical traditions crossed to white teenage audiences via the transistor radio and television, producing a racial and generational rupture that adults experienced as a genuine threat to social order.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">16</div><div><div class="topic-title">Rock &#8217;n&#8217; Roll</div><div class="topic-threads"><span class="thread-tag art">ART</span><span class="thread-tag lit">LIT</span><span class="thread-tag sci">SCI</span></div></div></div>
+      <p class="topic-hook">Rock &#8217;n&#8217; roll was not invented in the 1950s. It emerged from Black American musical traditions that had existed for decades. What changed: the transistor radio put it in teenagers&#8217; ears across racial lines. Adults on both sides of the political spectrum called it dangerous. They were not entirely wrong about what it was disrupting.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.loc.gov/search/?q=rock+roll+music+1950s&dates=1954%2F1965" target="_blank">LOC: Rock &#8217;n&#8217; Roll &amp; Popular Music, 1954&#8211;1965</a> &#8212; Photographs, sheet music, and press coverage of early rock &#8217;n&#8217; roll. Search also &#8220;payola,&#8221; &#8220;American Bandstand,&#8221; and &#8220;Sun Records.&#8221;</li>
         <li><a href="https://archive.org/search?query=chuck+berry+little+richard+television+1950s&mediatype=movies" target="_blank">Internet Archive: Early Rock &#8217;n&#8217; Roll Television</a> &#8212; Early TV performances and variety show appearances; some Ed Sullivan footage and kinescopes are in the public domain.</li>
@@ -712,12 +539,12 @@
     </div>
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">16</div><div><div class="topic-title">The Crucible &amp; HUAC</div><div class="topic-threads"><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span></div></div></div>
-      <p class="topic-hook">Miller wrote <em>The Crucible</em> in 1953 as an allegory for McCarthyism &#8212; then was himself called before HUAC three years later, turning the playwright into a character in his own parable and making the Hollywood Blacklist one of the era&#8217;s most documented assaults on creative freedom.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">17</div><div><div class="topic-title">The Crucible &amp; HUAC</div><div class="topic-threads"><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span></div></div></div>
+      <p class="topic-hook">Arthur Miller wrote <em>The Crucible</em> in 1953 as a coded critique of McCarthyism. HUAC summoned him before the committee in 1956. The playwright became, involuntarily, a character in his own allegory. Whether you find that poetic or alarming probably depends on whether you were in the room.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://www.congress.gov/congressional-record" target="_blank">Congress.gov: Congressional Record</a> &#8212; HUAC hearing transcripts are in the official congressional record, searchable by committee and date. Miller&#8217;s 1956 testimony and the Hollywood Ten hearings (1947) are here.</li>
         <li><a href="https://archive.org/search?query=HUAC+hollywood+ten+hearings&mediatype=movies" target="_blank">Internet Archive: HUAC Hearing Footage</a> &#8212; Newsreel and broadcast coverage of the Hollywood hearings; some footage is in the public domain.</li>
-        <li><a href="https://www.loc.gov/search/?q=arthur+miller+crucible+HUAC" target="_blank">LOC: Arthur Miller &amp; HUAC Papers</a> &#8212; The LOC holds Miller&#8217;s personal papers; the finding aid is online and some materials are digitized. Search &#8220;Hollywood blacklist&#8221; for industry-wide context.</li>
+        <li><a href="https://www.loc.gov/search/?q=arthur+miller+crucible+HUAC" target="_blank">LOC: Arthur Miller &amp; HUAC Papers</a> &#8212; The Harry Ransom Center (University of Texas at Austin) holds Miller&#8217;s personal papers &#8212; over 300 boxes including drafts of <em>The Crucible</em>, HUAC-related correspondence, and journals; the finding aid is online and the collection is open to researchers. Search LOC for &#8220;Hollywood blacklist&#8221; for industry-wide context.</li>
       </ul></div>
       <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Miller&#8217;s 1953 essay &#8220;Journey to The Crucible&#8221; (<em>New York Times</em>) explains his own intentions in writing the play &#8212; a model of an author treating his work as historical argument. The Hollywood Ten&#8217;s statements are available via the Internet Archive. Dalton Trumbo&#8217;s correspondence (Wisconsin Center for Film and Theater Research) is an extraordinary primary source. Ellen Schrecker&#8217;s <em>Many Are the Crimes</em> (1998) is the standard secondary text.</p></div>
     </div>
@@ -730,21 +557,21 @@
       <div class="topic-grid">
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">17</div><div><div class="topic-title">The Atomic Screen</div><div class="topic-threads"><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span><span class="thread-tag sci">SCI</span></div></div></div>
-      <p class="topic-hook">From <em>Invasion of the Body Snatchers</em> (1956) to <em>Dr. Strangelove</em> (1964), Cold War cinema developed a new genre of social anxiety &#8212; processing the era&#8217;s fears of conformity, nuclear annihilation, and the enemy within through narrative, and using new widescreen and Cinerama technology to put audiences inside that anxiety.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">18</div><div><div class="topic-title">The Atomic Screen</div><div class="topic-threads"><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span><span class="thread-tag sci">SCI</span></div></div></div>
+      <p class="topic-hook">Hollywood figured out that nuclear anxiety was box office. From <em>Invasion of the Body Snatchers</em> (1956) to <em>Dr. Strangelove</em> (1964), Cold War cinema developed an entire genre around contamination, conformity, and the end of the world. The genre was also, quietly, cultural criticism. The monsters were always about something else.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
         <li><a href="https://archive.org/details/feature_films" target="_blank">Internet Archive: Public Domain Feature Films</a> &#8212; Several key Cold War films are streamable and downloadable. Search &#8220;Invasion of the Body Snatchers,&#8221; &#8220;atomic,&#8221; and &#8220;science fiction 1950s&#8221; for usable footage.</li>
         <li><a href="https://www.loc.gov/search/?q=cold+war+cinema+science+fiction+film+1950s&dates=1950%2F1965" target="_blank">LOC: Cold War Cinema, 1950&#8211;1965</a> &#8212; Film stills, lobby cards, and press materials. Search &#8220;Cinerama&#8221; and &#8220;widescreen&#8221; for the technology angle that connects to the Science thread.</li>
         <li><a href="https://www.jstor.org/action/doBasicSearch?Query=cold+war+science+fiction+film" target="_blank">JSTOR (free tier): Cold War Film Scholarship</a> &#8212; Up to 100 free article reads per month without an institutional login. Search for scholarly analyses of <em>Dr. Strangelove</em>, <em>Invasion of the Body Snatchers</em>, and Cold War science fiction.</li>
       </ul></div>
-      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Susan Sontag&#8217;s &#8220;The Imagination of Disaster&#8221; (1965) is the essential critical essay on Cold War science fiction film &#8212; available via JSTOR or library database. The HUAC Hollywood hearings (Congress.gov) provide political context for how studios responded to Cold War pressure. Search Chronicling America for contemporaneous film reviews and box office coverage.</p></div>
+      <div class="topic-archive"><div class="ts-label">Archival Leads</div><p>Susan Sontag&#8217;s &#8220;The Imagination of Disaster&#8221; (<em>Commentary</em>, October 1965) is the essential critical essay on Cold War science fiction film &#8212; available via JSTOR or library database. The HUAC Hollywood hearings (Congress.gov) provide political context for how studios responded to Cold War pressure. Search Chronicling America for contemporaneous film reviews and box office coverage.</p></div>
     </div>
 
     <div class="topic-card">
-      <div class="topic-header"><div class="topic-num" aria-hidden="true">18</div><div><div class="topic-title">The Beat Generation</div><div class="topic-threads"><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span></div></div></div>
-      <p class="topic-hook">Kerouac, Ginsberg, and Burroughs wrote against the grain of postwar conformity &#8212; producing a countercultural literature that rejected the suburban consensus, the Organization Man, and the Cold War&#8217;s demand for ideological legibility, and that made nonconformity itself a public act.</p>
+      <div class="topic-header"><div class="topic-num" aria-hidden="true">19</div><div><div class="topic-title">The Beat Generation</div><div class="topic-threads"><span class="thread-tag lit">LIT</span><span class="thread-tag art">ART</span></div></div></div>
+      <p class="topic-hook">The Beats were not a political movement. They were, more precisely, a style of refusal. Kerouac, Ginsberg, and Burroughs declined the postwar social contract &#8212; the suburb, the organization, the television set &#8212; loudly, in public, and in print. Nonconformity as performance. Dissent as literature.</p>
       <div class="topic-sources"><div class="ts-label">Starter Sources</div><ul>
-        <li><a href="https://www.loc.gov/search/?q=beat+generation+kerouac+ginsberg&dates=1950%2F1965" target="_blank">LOC: Beat Generation, 1950&#8211;1965</a> &#8212; Manuscript materials, photographs, and press coverage. The LOC holds Allen Ginsberg&#8217;s papers; the finding aid is online and some materials are digitized.</li>
+        <li><a href="https://www.loc.gov/search/?q=beat+generation+kerouac+ginsberg&dates=1950%2F1965" target="_blank">LOC: Beat Generation, 1950&#8211;1965</a> &#8212; Manuscript materials, photographs, and press coverage. Allen Ginsberg&#8217;s papers are held at Stanford University Libraries (finding aid online); the LOC holds recordings of Ginsberg reading his poetry, some digitized.</li>
         <li><a href="https://archive.org/search?query=allen+ginsberg+jack+kerouac+beat&mediatype=audio" target="_blank">Internet Archive: Beat Generation Readings</a> &#8212; Audio recordings of Ginsberg reading <em>Howl</em> and Kerouac performances; some television interviews are also available under video.</li>
         <li><a href="https://www.hathitrust.org/" target="_blank">HathiTrust Digital Library: Beat Generation Scholarship</a> &#8212; Out-of-copyright critical texts and contemporaneous literary journals. Search for early academic and journalistic responses to Kerouac and Ginsberg from the late 1950s.</li>
       </ul></div>
@@ -760,9 +587,9 @@
 <!-- SECTION 4 -->
 <section id="sources">
   <div class="section-wrap">
-    <div class="section-divider"><span class="section-number">Toolkit &middot; 04</span><div class="section-rule"></div></div>
+    <div class="section-divider"><div class="section-rule"></div><span class="section-number">Toolkit &middot; 04</span><div class="section-rule"></div></div>
     <h2>Interdisciplinary Source Finder</h2>
-    <p class="section-intro">Your documentary must weave five interdisciplinary threads into a single, coherent argument: Science &amp; Tech, Math, Art &amp; Design, English &amp; Narrative, and Business. This section guides you to specialized databases and sources for each thread &#8212; material you are unlikely to find through a general web search and that will distinguish your research.</p>
+    <p class="section-intro">Your documentary must weave five interdisciplinary threads into a single coherent argument: Science &amp; Tech, Math, Art &amp; Design, Narrative &amp; Media, and Business. This section directs you to specialized databases for each thread. You will not find this material through a general web search. That is the point.</p>
     <div class="thread-grid">
 
       <div class="thread-block science">
@@ -770,15 +597,15 @@
           <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="var(--sci)" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
           <h3>Science &amp; Technology</h3>
         </div>
-        <p class="thread-desc">Technical explanations, engineering history, and scientific context. The goal is not just to explain how something worked but to show why it mattered and who built it.</p>
+        <p class="thread-desc">Technical explanations, engineering history, scientific context. The goal is not just explaining how something worked. Show why it mattered, who built it, and what it made possible next. Technical history is human history.</p>
         <div class="thread-sources">
-          <div><div class="ts-name"><a href="https://www.aps.org/publications/apsnews" target="_blank">American Physical Society: APS News</a></div><div class="ts-note">Authoritative articles on major physics breakthroughs, including transistors and space science. The "This Month in Physics History" feature is especially useful. Free.</div></div>
-          <div><div class="ts-name"><a href="https://www.sciencehistory.org/distillations/" target="_blank">Science History Institute: Distillations</a></div><div class="ts-note">Long-form essays and podcasts on the history of science and technology. Strong on Cold War chemistry, materials science, and pharmaceutical history.</div></div>
-          <div><div class="ts-name"><a href="https://www.nasa.gov/history/" target="_blank">NASA History Division</a></div><div class="ts-note">Primary documents, technical reports, oral histories, and image galleries. The definitive open-access source for Space Race research. Many documents are declassified and downloadable.</div></div>
-          <div><div class="ts-name"><a href="https://www.computerhistory.org/collections/" target="_blank">Computer History Museum Collections</a></div><div class="ts-note">Oral histories, artifacts, and technical documents on computing history. Searchable online catalog with strong Cold War-era holdings.</div></div>
-          <div><div class="ts-name"><a href="https://www.hathitrust.org/" target="_blank">HathiTrust Digital Library</a></div><div class="ts-note">Millions of digitized books and journals, including out-of-copyright technical publications from the postwar era. Search for contemporaneous scientific reports and textbooks.</div></div>
+          <div><div class="ts-name"><a href="https://www.aps.org/publications/apsnews" target="_blank">American Physical Society: APS News</a></div><div class="ts-note">Authoritative articles on major physics breakthroughs, including transistors and space science. The &#8220;This Month in Physics History&#8221; feature is particularly useful for Cold War-era topics. Free.</div></div>
+          <div><div class="ts-name"><a href="https://www.sciencehistory.org/distillations/" target="_blank">Science History Institute: Distillations</a></div><div class="ts-note">Long-form essays and podcasts on the history of science and technology. Strong on Cold War chemistry, materials science, and pharmaceutical history. Readable by non-specialists.</div></div>
+          <div><div class="ts-name"><a href="https://www.nasa.gov/history/" target="_blank">NASA History Division</a></div><div class="ts-note">Primary documents, technical reports, oral histories, and image galleries. The definitive open-access source for Space Race research. Many documents are declassified; most are downloadable.</div></div>
+          <div><div class="ts-name"><a href="https://www.computerhistory.org/collections/" target="_blank">Computer History Museum Collections</a></div><div class="ts-note">Oral histories, artifacts, and technical documents on computing history from ENIAC through the personal computer era. Searchable online; strong Cold War-era holdings.</div></div>
+          <div><div class="ts-name"><a href="https://www.hathitrust.org/" target="_blank">HathiTrust Digital Library</a></div><div class="ts-note">Millions of digitized books and journals, including out-of-copyright technical publications from the postwar era. Search for contemporaneous scientific reports, policy documents, and textbooks.</div></div>
         </div>
-        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>When researching a technical innovation, look for the original patent filing via <a href="https://patents.google.com" target="_blank">Google Patents</a>. Patent diagrams are public domain and often the clearest explanation of how a technology worked.</p></div>
+        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>When researching a technical innovation, find the original patent filing via <a href="https://patents.google.com" target="_blank">Google Patents</a>. Patent diagrams are public domain. They are also, often, the clearest explanation of how a technology actually worked &#8212; engineers write for engineers, not for posterity.</p></div>
       </div>
 
       <div class="thread-block math">
@@ -786,15 +613,15 @@
           <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="var(--math)" stroke-width="1.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           <h3>Math &amp; Data</h3>
         </div>
-        <p class="thread-desc">Numbers tell a different story than narrative. Statistics, game theory, economic modeling, and demographic data reveal the structural logic behind Cold War developments that qualitative sources obscure.</p>
+        <p class="thread-desc">Numbers tell a different story than narrative. Statistics, game theory, economic modeling, demographic data: these reveal the structural logic underneath events that qualitative sources can only describe. Find the numbers. Then interrogate them.</p>
         <div class="thread-sources">
-          <div><div class="ts-name"><a href="https://www.census.gov/history/www/through_the_decades/" target="_blank">U.S. Census Bureau: Historical Statistics</a></div><div class="ts-note">Demographic data on suburbanization, education, income, and housing from the 1950 and 1960 censuses. Essential for Levittown, GI Bill, and franchise economics topics.</div></div>
-          <div><div class="ts-name"><a href="https://fraser.stlouisfed.org/" target="_blank">FRASER (St. Louis Fed): Historical Economic Data</a></div><div class="ts-note">Digitized Federal Reserve reports, budget documents, and economic indicators from the postwar era. Free and searchable.</div></div>
-          <div><div class="ts-name"><a href="https://www.rand.org/about/history.html" target="_blank">RAND Corporation: History &amp; Declassified Reports</a></div><div class="ts-note">RAND developed the mathematical framework for MAD and nuclear deterrence. Many original Cold War reports, including work by Herman Kahn, are now publicly available.</div></div>
-          <div><div class="ts-name"><a href="https://ourworldindata.org/nuclear-weapons" target="_blank">Our World in Data: Nuclear Weapons</a></div><div class="ts-note">Citable visualizations of nuclear warhead stockpiles and arms race data. Useful for building data-driven documentary segments.</div></div>
-          <div><div class="ts-name"><a href="https://nces.ed.gov/programs/digest/" target="_blank">NCES: Digest of Education Statistics</a></div><div class="ts-note">Published annually since 1962, the Digest includes historical tables on enrollment, federal education funding, and science and math course-taking from the postwar era through the present. Useful for documenting the post-Sputnik expansion funded by the National Defense Education Act (1958).</div></div>
+          <div><div class="ts-name"><a href="https://www.census.gov/history/www/through_the_decades/" target="_blank">U.S. Census Bureau: Historical Statistics</a></div><div class="ts-note">Demographic data on suburbanization, education, income, and housing from the 1950 and 1960 censuses. Essential for Levittown, the GI Bill, and franchise economics. The numbers tell the story the narrative can only gesture at.</div></div>
+          <div><div class="ts-name"><a href="https://fraser.stlouisfed.org/" target="_blank">FRASER (St. Louis Fed): Historical Economic Data</a></div><div class="ts-note">Digitized Federal Reserve reports, budget documents, and economic indicators from the postwar era. Free, fully searchable, and deeply sourced.</div></div>
+          <div><div class="ts-name"><a href="https://www.rand.org/about/history.html" target="_blank">RAND Corporation: History &amp; Declassified Reports</a></div><div class="ts-note">RAND applied game theory and systems analysis to nuclear deterrence strategy during the Cold War. Many original reports are now publicly available, including work by Herman Kahn &#8212; a RAND analyst who argued nuclear war was survivable and opposed MAD as a credible deterrent. A foundational site for understanding how strategic analysis shaped nuclear policy.</div></div>
+          <div><div class="ts-name"><a href="https://ourworldindata.org/nuclear-weapons" target="_blank">Our World in Data: Nuclear Weapons</a></div><div class="ts-note">Citable visualizations of nuclear warhead stockpiles and arms race data. Useful for building data-driven documentary segments; each chart cites primary sources you can trace.</div></div>
+          <div><div class="ts-name"><a href="https://nces.ed.gov/programs/digest/" target="_blank">NCES: Digest of Education Statistics</a></div><div class="ts-note">Initiated in 1962 and published annually (with three combined editions: 1977&#8211;78, 1983&#8211;84, and 1985&#8211;86), the Digest includes historical tables on enrollment, federal education funding, and science and math course-taking from the postwar era through the present. Useful for documenting the post-Sputnik expansion funded by the National Defense Education Act (1958).</div></div>
         </div>
-        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>When you find a statistic, always ask: who collected it, why, and what does it leave out? Cold War-era numbers were often produced by parties with a stake in the results. The statistic is itself a primary source.</p></div>
+        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>When you find a statistic: who collected it, why, and what does it leave out? Cold War-era numbers were frequently produced by parties with a stake in the results. The statistic is itself a primary source. Treat it accordingly.</p></div>
       </div>
 
       <div class="thread-block art">
@@ -802,14 +629,14 @@
           <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="var(--art)" stroke-width="1.5" aria-hidden="true"><path d="M12 2a10 10 0 100 20 4 4 0 000-8 4 4 0 010-8"/><circle cx="6.5" cy="11.5" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="14" cy="7" r="1"/><circle cx="17.5" cy="11.5" r="1"/></svg>
           <h3>Art &amp; Design</h3>
         </div>
-        <p class="thread-desc">How was the Cold War visualized? Propaganda posters, industrial design, architecture, advertising, and fine art all participated in the cultural construction of the era. These sources help you analyze the aesthetics of ideology.</p>
+        <p class="thread-desc">How was the Cold War visualized? Propaganda posters, industrial design, architecture, advertising, fine art: all participated in constructing the era&#8217;s public meaning. These sources help you analyze the aesthetics of ideology &#8212; what things were made to look like, and why.</p>
         <div class="thread-sources">
-          <div><div class="ts-name"><a href="https://americanart.si.edu/research" target="_blank">Smithsonian American Art Museum Research</a></div><div class="ts-note">Open-access artwork images, exhibition records, and the Archives of American Art. Essential for AbEx and postwar design topics.</div></div>
-          <div><div class="ts-name"><a href="https://www.loc.gov/pictures/" target="_blank">LOC Prints &amp; Photographs Online Catalog</a></div><div class="ts-note">Over 14 million images including photographs, posters, architectural drawings, cartoons, and prints. Filter by subject heading, date, and format.</div></div>
-          <div><div class="ts-name"><a href="https://artsandculture.google.com/project/cold-war" target="_blank">Google Arts &amp; Culture: Cold War</a></div><div class="ts-note">High-resolution artwork and artifact images from museum partners worldwide. Check terms before downloading.</div></div>
-          <div><div class="ts-name"><a href="https://archive.org/details/Ephemera" target="_blank">Internet Archive: Ephemera Collection</a></div><div class="ts-note">Advertisements, pamphlets, and printed ephemera. Excellent for analyzing the visual culture of consumerism and Cold War anxiety in everyday graphic design.</div></div>
+          <div><div class="ts-name"><a href="https://americanart.si.edu/research" target="_blank">Smithsonian American Art Museum Research</a></div><div class="ts-note">Open-access artwork images, exhibition records, and the Archives of American Art. Essential for Abstract Expressionism and postwar design topics. Artist papers are often digitized and available here.</div></div>
+          <div><div class="ts-name"><a href="https://www.loc.gov/pictures/" target="_blank">LOC Prints &amp; Photographs Online Catalog</a></div><div class="ts-note">Over 17 million items: photographs, posters, architectural drawings, cartoons, prints. Filter by subject heading, date, and format. One of the deepest visual archives available to the public.</div></div>
+          <div><div class="ts-name"><a href="https://artsandculture.google.com/entity/cold-war/m01w1sx?hl=en" target="_blank">Google Arts &amp; Culture: Cold War</a></div><div class="ts-note">High-resolution artwork and artifact images from museum partners worldwide. Useful for visual context. Check terms before downloading; licensing varies by institution.</div></div>
+          <div><div class="ts-name"><a href="https://archive.org/details/Ephemera" target="_blank">Internet Archive: Ephemera Collection</a></div><div class="ts-note">Advertisements, pamphlets, and printed ephemera from the postwar era. Excellent for analyzing the visual culture of consumerism and Cold War anxiety in everyday graphic design: the medium is often the message.</div></div>
         </div>
-        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>When analyzing a visual source, ask: who made it, for whom, in what context was it seen, and what does it ask its audience to believe or feel? A GM advertisement and a civil defense poster are both Cold War artifacts doing very different ideological work.</p></div>
+        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>When analyzing a visual source: who made it, for whom, in what context was it seen, and what does it ask its audience to believe or feel? A GM advertisement and a civil defense poster are both Cold War artifacts. They are doing very different ideological work. Your job is to say what that work is.</p></div>
       </div>
 
       <div class="thread-block narrative">
@@ -817,13 +644,16 @@
           <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="var(--lit)" stroke-width="1.5" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
           <h3>Narrative &amp; Media</h3>
         </div>
-        <p class="thread-desc">Literature, journalism, film, radio, and television shape how people experience and understand history. These sources help you trace the public conversation happening around your topic in real time.</p>
+        <p class="thread-desc">Literature, journalism, film, radio, and television shaped how people experienced history as it happened. These sources let you trace the public conversation in real time: what people knew, feared, wanted, and were told.</p>
         <div class="thread-sources">
-          <div><div class="ts-name"><a href="https://chroniclingamerica.loc.gov/" target="_blank">Chronicling America (LOC)</a></div><div class="ts-note">Digitized U.S. newspapers from 1756 through 1963. Fully free and keyword-searchable. The site was redesigned in August 2025; existing bookmarks redirect automatically.</div></div>
-          <div><div class="ts-name"><a href="https://archive.org/details/audio" target="_blank">Internet Archive: Audio &amp; Radio</a></div><div class="ts-note">Thousands of digitized radio broadcasts from the postwar era. Primary sources for understanding how the Cold War sounded to American audiences.</div></div>
-          <div><div class="ts-name"><a href="https://www.jstor.org/action/doBasicSearch?Query=cold+war+literature" target="_blank">JSTOR (free tier)</a></div><div class="ts-note">JSTOR allows 100 free article reads per month without an institutional login. Search for scholarly analyses of Cold War fiction, film, and media.</div></div>
-          <div><div class="ts-name"><a href="https://dp.la/search?q=cold+war+fiction+literature" target="_blank">DPLA: Digital Public Library of America</a></div><div class="ts-note">Aggregates collections from libraries and archives across the U.S. Strong for finding digitized books, journals, and periodicals from the Cold War era.</div></div>
-          <div><div class="ts-name"><a href="https://archive.org/details/feature_films" target="_blank">Internet Archive: Feature Films</a></div><div class="ts-note">Public domain films including Cold War-era science fiction and social problem films. Search by decade for relevant titles.</div></div>
+          <div><div class="ts-name"><a href="https://chroniclingamerica.loc.gov/" target="_blank">Chronicling America (LOC)</a></div><div class="ts-note">Digitized U.S. newspapers from 1756 through 1963. Fully free and keyword-searchable. The contemporaneous record: what people read as events unfolded, not what historians said about them afterward.</div></div>
+          <div><div class="ts-name"><a href="https://archive.org/details/audio" target="_blank">Internet Archive: Audio &amp; Radio</a></div><div class="ts-note">Thousands of digitized radio broadcasts from the postwar era. Primary sources for understanding how the Cold War <em>sounded</em> to American audiences. Voice, tone, and emphasis that text cannot replicate.</div></div>
+          <div><div class="ts-name"><a href="https://www.jstor.org/action/doBasicSearch?Query=cold+war+literature" target="_blank">JSTOR (free tier)</a></div><div class="ts-note">Up to 100 free article reads per month without an institutional login. Search for scholarly analyses of Cold War fiction, film, and media. Peer-reviewed secondary sources for every topic on this list.</div></div>
+          <div><div class="ts-name"><a href="https://dp.la/search?q=cold+war+fiction+literature" target="_blank">DPLA: Digital Public Library of America</a></div><div class="ts-note">Aggregates collections from libraries and archives across the U.S. Strong for finding digitized books, journals, and periodicals from the Cold War era. One search: many repositories.</div></div>
+          <div><div class="ts-name"><a href="https://archive.org/details/feature_films" target="_blank">Internet Archive: Feature Films</a></div><div class="ts-note">Public domain films, including Cold War-era science fiction and social problem films. Search by decade. Primary sources for the Narrative &amp; Media thread.</div></div>
+          <div><div class="ts-name"><a href="https://vandvreader.org/" target="_blank">Voices &amp; Visions: U.S. Foreign Relations Reader</a></div><div class="ts-note">A collaboratively built, audio-visual primary source reader covering U.S. foreign relations from Theodore Roosevelt (1906) through the post-Cold War era (through 1999). Combines audio recordings, film clips, and images with interpretive context. Strong on civil defense culture, nuclear anxiety, and the foreign policy dimensions of the Cold War. Free.</div></div>
+          <div><div class="ts-name"><a href="https://millercenter.org/the-presidency/secret-white-house-tapes" target="_blank">Miller Center: Presidential Recordings Program (UVA)</a></div><div class="ts-note">Audio recordings and summaries from the Secret White House Tapes: FDR through Nixon. Kennedy&#8217;s Cuban Missile Crisis deliberations, LBJ&#8217;s Vietnam calls, Eisenhower&#8217;s internal debates &#8212; the unscripted record of presidential decision-making. Audio free; fully annotated transcripts available via the Presidential Recordings Digital Edition (UVA Press, subscription).</div></div>
+          <div><div class="ts-name"><a href="https://openvault.wgbh.org/" target="_blank">GBH Open Vault (Boston)</a></div><div class="ts-note">WGBH Boston&#8217;s archival broadcast journalism collection. The raw interview footage from <em>War and Peace in the Nuclear Age</em> (1989) &#8212; a thirteen-part PBS series on forty years of nuclear competition &#8212; is accessible online; full episodes require an in-person appointment at GBH in Boston. Note: the FRONTLINE collection at Open Vault is restricted to on-site and special-arrangement access; current FRONTLINE documentaries are freely available at pbs.org/frontline.</div></div>
         </div>
         <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Suggested Texts by Topic</div><p><em>The Right Stuff</em>, Tom Wolfe (Space Race) &middot; <em>On the Beach</em>, Nevil Shute (Nuclear Anxiety) &middot; <em>The Man in the Gray Flannel Suit</em>, Sloan Wilson (Suburbia) &middot; <em>Howl</em>, Allen Ginsberg (Counterculture) &middot; <em>The Manchurian Candidate</em>, Richard Condon (Surveillance) &middot; <em>The Crucible</em>, Arthur Miller (McCarthyism)</p></div>
       <div class="thread-block" style="border-top:4px solid #8a5a00;">
@@ -831,15 +661,15 @@
           <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="#8a5a00" stroke-width="1.5" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
           <h3>Business &amp; Economy</h3>
         </div>
-        <p class="thread-desc">How did the private sector grow from WWII and the Cold War? This thread traces the specific economic structures &#8212; franchising, Keynesian policy, defense contracting, consumer culture &#8212; that shaped the postwar economy. Numbers and corporate histories are both essential here.</p>
+        <p class="thread-desc">How did the private sector grow from WWII and the Cold War? This thread traces the specific economic structures that shaped the postwar economy: franchising, Keynesian policy, defense contracting, consumer culture. Numbers and corporate histories are both required. Neither alone is sufficient.</p>
         <div class="thread-sources">
-          <div><div class="ts-name"><a href="https://fraser.stlouisfed.org/" target="_blank">FRASER (St. Louis Fed): Historical Economic Data</a></div><div class="ts-note">The single best open-access source for postwar economic data: Federal Reserve reports, Treasury documents, Council of Economic Advisers reports, and economic indicators from the entire Cold War era. Free and fully searchable.</div></div>
+          <div><div class="ts-name"><a href="https://fraser.stlouisfed.org/" target="_blank">FRASER (St. Louis Fed): Historical Economic Data</a></div><div class="ts-note">The single best open-access source for postwar economic data: Federal Reserve reports, Treasury documents, Council of Economic Advisers reports, economic indicators from the entire Cold War era. Free and fully searchable.</div></div>
           <div><div class="ts-name"><a href="https://www.census.gov/history/www/through_the_decades/" target="_blank">U.S. Census Bureau: Through the Decades</a></div><div class="ts-note">Population, housing, income, and consumer data from the 1940, 1950, and 1960 censuses. Essential for quantifying suburbanization, franchise growth, and the Sun Belt migration.</div></div>
-          <div><div class="ts-name"><a href="https://www.hathitrust.org/" target="_blank">HathiTrust Digital Library: Business &amp; Economic History</a></div><div class="ts-note">Out-of-copyright business histories, trade publications, and economic texts from the postwar era. Search for contemporaneous business journalism and annual reports from the period.</div></div>
-          <div><div class="ts-name"><a href="https://www.rand.org/about/history.html" target="_blank">RAND Corporation: History &amp; Declassified Reports</a></div><div class="ts-note">RAND was the archetypal Cold War defense contractor &#8212; a for-profit think tank whose work on deterrence strategy, systems analysis, and cost-benefit modeling shaped how the U.S. government made decisions. Primary documents on defense economics available from the history page.</div></div>
-          <div><div class="ts-name"><a href="https://www.eisenhowerlibrary.gov/research/online-documents" target="_blank">Eisenhower Presidential Library: Online Documents</a></div><div class="ts-note">Declassified records including Council of Economic Advisers reports, budget documents, and the internal debate over military spending vs. civilian economic growth. Eisenhower&#8217;s &#8220;military-industrial complex&#8221; farewell address is here &#8212; one of the era&#8217;s most important primary texts.</div></div>
+          <div><div class="ts-name"><a href="https://www.hathitrust.org/" target="_blank">HathiTrust Digital Library: Business &amp; Economic History</a></div><div class="ts-note">Out-of-copyright business histories, trade publications, and economic texts from the postwar era. Search for contemporaneous business journalism and annual reports. What the industry said about itself, at the time.</div></div>
+          <div><div class="ts-name"><a href="https://www.rand.org/about/history.html" target="_blank">RAND Corporation: History &amp; Declassified Reports</a></div><div class="ts-note">RAND was the archetypal Cold War policy research institution &#8212; a nonprofit think tank, not a defense manufacturer, whose work on deterrence strategy, systems analysis, and cost-benefit modeling shaped how the U.S. government made decisions. Primary documents on defense economics available from the history page.</div></div>
+          <div><div class="ts-name"><a href="https://www.eisenhowerlibrary.gov/research/online-documents" target="_blank">Eisenhower Presidential Library: Online Documents</a></div><div class="ts-note">Declassified records including Council of Economic Advisers reports, budget documents, and the internal debate over military spending versus civilian economic growth. Eisenhower&#8217;s farewell address &#8212; the one that coined &#8220;military-industrial complex&#8221; &#8212; is here. One of the era&#8217;s most important primary texts.</div></div>
         </div>
-        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>The Business thread works best when it is specific. &#8220;The economy grew&#8221; is not an argument. &#8220;McDonald&#8217;s franchise model produced X locations and $Y in revenue between 1955 and 1965, applying the same assembly-line logic as a defense factory&#8221; is an argument. Find the numbers first, then build the analysis around them.</p></div>
+        <div class="callout tip" style="margin-top:1rem;"><div class="callout-label">Research Tip</div><p>This thread works best when it is specific. &#8220;The economy grew&#8221; is not an argument. &#8220;McDonald&#8217;s franchise model produced X locations and $Y in revenue between 1955 and 1965, applying the same assembly-line logic as a defense factory&#8221; is an argument. Find the numbers first; build the analysis around them.</p></div>
       </div>
 
     </div>
@@ -861,77 +691,7 @@ function copyOut(id, btn) {
   });
 }
 
-/* ── Search String Builder ── */
-function buildSearchString() {
-  var topic   = document.getElementById('sb-topic').value.trim();
-  var related = document.getElementById('sb-related').value.trim();
-  var exclude = document.getElementById('sb-exclude').value.trim();
-  var dStart  = document.getElementById('sb-date-start').value;
-  var dEnd    = document.getElementById('sb-date-end').value;
-  var archive = document.getElementById('sb-archive').value;
-  var formats = Array.from(document.querySelectorAll('.sb-format:checked')).map(function(e){ return e.value; });
-  if (!topic) { alert('Please enter a topic before generating a search string.'); return; }
-  var parts = [];
-  if (related) { parts.push('(' + topic + ' AND ' + related + ')'); } else { parts.push(topic); }
-  if (exclude) parts.push('NOT ' + exclude);
-  if (formats.length > 0 && formats.length < 5) {
-    parts.push('AND ' + (formats.length === 1 ? formats[0] : '(' + formats.join(' OR ') + ')'));
-  }
-  var query = parts.join(' ');
-  var instructions = {
-    loc: '1. Go to loc.gov/search\n2. Paste the search string into the main search bar\n3. In the left sidebar, set the Date filter to ' + dStart + '\u2013' + dEnd + '\n4. Use Online Format to filter by your media type\n5. When you find a strong result, click its subject headings to find related items',
-    nara: '1. Go to archives.gov/research/search\n2. Paste the search string into the text field\n3. Use the Date Range filter: ' + dStart + ' to ' + dEnd + '\n4. Filter by Record Group or media type in the sidebar\n5. Note the Record Group numbers of useful results \u2014 they\u2019ll help you find related records',
-    prelinger: '1. Go to archive.org/details/prelinger\n2. Paste the search string into the search bar\n3. Filter by Year: ' + dStart + '\u2013' + dEnd + '\n4. Browse by genre tags like industrial films or educational films if keyword search is sparse\n5. Check each item\u2019s rights statement before downloading',
-    chronicling: '1. Go to chroniclingamerica.loc.gov\n2. Paste the string into the search field\n3. Set date range: ' + dStart + '\u2013' + dEnd + '\n4. Filter by state or newspaper title for regional coverage\n5. Note: Chronicling America coverage ends in 1963 \u2014 ideal for your project\u2019s full date range'
-  };
-  document.getElementById('sb-result').textContent = query;
-  document.getElementById('sb-instructions').textContent = instructions[archive];
-  document.getElementById('sb-output').classList.add('visible');
-}
 
-/* ── Fair Use Checker ── */
-var fuState = {'fu-1': null, 'fu-2': null, 'fu-3': null, 'fu-4': null};
-function toggleFactor(id) {
-  document.getElementById(id).classList.toggle('open');
-}
-function updateFactor(id, value) {
-  fuState[id] = value;
-  var status = document.getElementById(id + '-status');
-  var labels = {favors: 'Favors Fair Use', neutral: 'Neutral', against: 'Weighs Against'};
-  status.textContent = labels[value];
-  status.className = 'fu-factor-status ' + value;
-}
-function evaluateFairUse() {
-  var answered = Object.values(fuState).filter(function(v){ return v !== null; }).length;
-  if (answered < 4) { alert('Please answer all four factors before evaluating.'); return; }
-  var scores = {favors: 2, neutral: 1, against: 0};
-  var total = Object.values(fuState).reduce(function(sum, v){ return sum + scores[v]; }, 0);
-  var f4bonus = fuState['fu-4'] === 'favors' ? 1 : fuState['fu-4'] === 'against' ? -1 : 0;
-  var weighted = total + f4bonus;
-  var fill = document.getElementById('fu-fill');
-  var verdict = document.getElementById('fu-verdict');
-  var note = document.getElementById('fu-note');
-  var result = document.getElementById('fu-result');
-  result.classList.add('visible');
-  fill.style.width = Math.max(5, Math.round((weighted / 9) * 100)) + '%';
-  if (weighted >= 6) {
-    fill.style.background = 'var(--math)';
-    verdict.className = 'fu-result-verdict strong';
-    verdict.textContent = 'Reasonably Strong Fair Use Argument';
-    note.textContent = 'Based on your responses, you have a defensible fair use case \u2014 your use is transformative or educational, the work is factual or modestly creative, you\u2019re using only what\u2019s necessary, and the market impact is minimal. Document your reasoning in writing and keep a log of each source and your justification.';
-  } else if (weighted >= 3) {
-    fill.style.background = '#5e4510';
-    verdict.className = 'fu-result-verdict caution';
-    verdict.textContent = 'Proceed with Caution';
-    note.textContent = 'Your situation has a mix of factors \u2014 some pointing toward fair use, others working against it. Before using this material, consider whether you could use a smaller portion, a more transformative framing, or a free alternative source. If you proceed, document your reasoning carefully.';
-  } else {
-    fill.style.background = 'var(--red)';
-    verdict.className = 'fu-result-verdict risk';
-    verdict.textContent = 'Significant Copyright Risk \u2014 Seek an Alternative';
-    note.textContent = 'Your planned use weighs heavily against fair use: the use is not transformative, the work is highly creative, you\u2019re using a substantial portion, and/or the distribution could harm the market for the original. The safest course is to find a public domain or openly licensed alternative. If this source is truly irreplaceable, consult your teacher or a librarian before proceeding.';
-  }
-  result.scrollIntoView({behavior: 'smooth', block: 'nearest'});
-}
 
 /* ── Nav active state ── */
 var navLinks = document.querySelectorAll('.nav-links a');
